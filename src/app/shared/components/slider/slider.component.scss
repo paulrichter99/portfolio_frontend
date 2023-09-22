@@ -11,10 +11,32 @@
 
     transition: 1s ease-in-out;
 }
-  
+
 .slider-element{
     margin: 0 20px;
-    min-width: calc(25% - 40px);
     padding: 20px 0;
     text-align: center;
+}
+
+.navigation-bullets-wrapper{
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+
+  // dots
+  .navigation-bullet {
+    border-radius: 50%;
+    border: 1px solid rgb(107, 107, 107);
+    width: 14px;
+    height: 14px;
+    margin: 0 5px;
+  }
+
+  .active-bullet {
+    background-color: rgb(122, 122, 122);
+  }
+}
+
+.invisible {
+  display: none;
 }
