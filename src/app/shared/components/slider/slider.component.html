@@ -1,0 +1,10 @@
+<div class='slider' id='slider'>
+    <div class='slider-wrapper' id='slider-wrapper'>
+        <div class="slider-element" *ngFor="let slide of slides!.slice(currentFirstSlide,currentLastSlide+1);">
+            <h1>  {{slide.headerText}} </h1>
+            <div> {{slide.descriptionText}} </div>
+            <div> {{slide.imgSymbol}} </div>
+        </div> 
+    </div>
+</div>
+<button (click)="slideRight()"> Slide Right </button>

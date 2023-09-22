@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from 'src/app/shared/objects/person';
+import { Slide } from 'src/app/shared/objects/slide';
 
 @Component({
   selector: 'app-about-me',
@@ -17,8 +18,11 @@ export class AboutMeComponent implements OnInit {
     "paulrichter.jena@gmail.com");
   age: number = 30;
 
+  slides: Slide[] = [];
+
   ngOnInit(): void {
     this.calcAge();
+    this.generateSlides();
   }
 
 
@@ -34,5 +38,21 @@ export class AboutMeComponent implements OnInit {
         (new Date().getMonth() == myUser_birthMonth-1 && new Date().getDate() < myUser_birthDay)){
       this.age--;
     }
+  }
+
+  generateSlides(){
+    let newSlide: Slide = new Slide("Java" , "This is my Island - 100%", "fas-fa-java");
+    this.slides.push(newSlide);
+    newSlide = new Slide("HTML/CSS", "Very skilled - 100%", "fas-fa-HTML");
+    this.slides.push(newSlide);
+    newSlide = new Slide("Typescript and Javascript", "Very skilled - 100%", "fas-fa-TS");
+    this.slides.push(newSlide);
+    newSlide = new Slide("Angular", "Almost all Frontend related projects by me are done with angular", "fas-fa-HTML");
+    this.slides.push(newSlide);
+    newSlide = new Slide("Spring", "If I need a (Java) Backend Spring is my way to go", "fas-fa-HTML");
+    this.slides.push(newSlide);
+    newSlide = new Slide("MySQL Databases", "The Databases I use the most are relational Databases such as MySQL", "fas-fa-HTML");
+    this.slides.push(newSlide);
+    console.log(this.slides);
   }
 }
