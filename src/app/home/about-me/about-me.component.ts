@@ -41,18 +41,42 @@ export class AboutMeComponent implements OnInit {
   }
 
   generateSlides(){
-    let newSlide: Slide = new Slide("Java" , "This is my Island - 100%", "fas-fa-java");
+    let newSlide: Slide = new Slide(
+      "Java",
+      "I gathered the most knowledge here and feel very comfortable using it",
+      100,
+      "#ff7b05");
     this.slides.push(newSlide);
-    newSlide = new Slide("HTML/CSS", "Very skilled - 100%", "fas-fa-HTML");
+    newSlide = new Slide(
+      "HTML/CSS",
+      "Since I am using Angular for almost all of my Frontend, I worked a lot with them",
+      85,
+      "#0048df");
     this.slides.push(newSlide);
-    newSlide = new Slide("Typescript and Javascript", "Very skilled - 100%", "fas-fa-TS");
+    newSlide = new Slide(
+      "TS/JS",
+      "Using Angular I could gather a lot of knowledge here",
+      80,
+      "#c300e2");
     this.slides.push(newSlide);
-    newSlide = new Slide("Angular", "Almost all Frontend related projects by me are done with angular", "fas-fa-HTML");
+    newSlide = new Slide(
+      "Angular",
+      "Almost all Frontend related projects by me are done with angular",
+      80,
+      "#d50300");
     this.slides.push(newSlide);
-    newSlide = new Slide("Spring", "If I need a (Java) Backend Spring is my way to go", "fas-fa-HTML");
+    newSlide = new Slide(
+      "Spring",
+      "My first big project used Spring, I have learned a lot since starting it",
+      80,
+      "#0c8600");
     this.slides.push(newSlide);
-    newSlide = new Slide("MySQL Databases", "The Databases I use the most are relational Databases such as MySQL", "fas-fa-HTML");
+    newSlide = new Slide(
+      "Databases",
+      "Working with Spring I have worked and administrated several Databases",
+      75,
+      "#001f76");
     this.slides.push(newSlide);
-    console.log(this.slides);
+    //console.log(this.slides);
   }
 }

@@ -19,7 +19,13 @@ export class SliderComponent implements OnInit, AfterViewInit {
   timeIntervalSeconds = 3;
   currentDesiredMarginLeft = 0;
 
+  //svg-attributes
+  svgBaseHeight:number = 200;
+  svgBaseWidth:number = 200;
+  svgStrokeWidth: number = 12;
+  svgFontSize:number = 64;
   innerWidth: any;
+
   ngOnInit() {
     this.innerWidth = window.innerWidth;
     //setInterval(()=> { this.slideRight() }, this.timeIntervalSeconds * 1000);
@@ -70,7 +76,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
     let percentageToMove = 100 / this.currentMaxSlideNumbers; // Adjust the percentage to move as needed
     // using the bullets to navigate needs us to set the currentFirstSlide to the index value
-    if(index){
+    if(index != null){
       // calculate the distance between the index we want to go and the current index
       //    index = 5 (MySQL), next-1 = 0 (currently on Java) -> we wanna move 5 times
       let elementsToMove = index - (next-1)
@@ -118,8 +124,8 @@ export class SliderComponent implements OnInit, AfterViewInit {
     navBulletArray[this.currentFirstSlide].classList.add("active-bullet");
   }
 
-  slideFromIndex(index : number){
-    console.log("sliding from index " + index)
+  slideToIndex(index : number){
+    // console.log("sliding to index " + index)
     this.slideRight(index);
   }
 }
