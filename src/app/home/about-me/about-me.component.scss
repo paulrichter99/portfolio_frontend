@@ -1,3 +1,18 @@
+@import "/src/app/shared/variables.scss";
+
+#about{
+  background: linear-gradient(129deg,
+    rgba(203,184,165,1) 0%,
+    rgba(232,220,208,1) 30%,
+    rgba(232,220,208,1) 50%,
+    rgba(232,220,208,1) 70%,
+    rgba(194,177,159,1) 100%
+  );
+  background: $base-color-bg;
+  color: $base-color;
+  height: max-content;
+}
+
 b {
   font-weight: 500;
 }
@@ -6,7 +21,7 @@ b {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 100;
   font-size: 18px;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   padding-top: 60px;
   width: 80%;
   margin: 0 auto;
@@ -21,18 +36,18 @@ b {
 }
 
 #about-header-wrapper > #upper-layer-header {
-  color: rgb(59, 59, 59);
   font-weight: 700;
   font-size: 38px;
   margin-top: -45px;
   z-index: 1;
+  color: $base-color;
 }
 
 #about-header-wrapper > #lower-layer-header {
   font-weight: 700;
   font-size: 58px;
   opacity: 0.2;
-  color: gray;
+  color: $base-color;
 }
 
 #about-body-wrapper{
@@ -65,11 +80,14 @@ b {
   }
 }
 
-@media (max-width: 1200px){
-  #about-body-wrapper{
-    flex-direction: column;
+#about-right-side-wrapper{
+  > div{
+    margin-bottom: 8px;
+    font-family: 'brotherton', sans-serif;
+    font-size: 40px;
+    color: $base-color;
+    font-weight: 500;
   }
-
 }
 
 #about-detail-table{
@@ -82,14 +100,20 @@ b {
     padding-right: 20px;
   }
 }
+
+@media (max-width: 1200px){
+  #about-body-wrapper{
+    flex-direction: column;
+  }
+
+}
+
 /* TODO: row view for profile picture, side by side when about-right side goes down */
 @media (min-width: 1200px){
   #about-right-side-wrapper{
     padding: 20px;
     padding-right: 0;
     border-left: 2px solid rgb(143, 143, 143);
-    border-radius: 10px;
-    border-radius: 10px 0;
   }
 }
 

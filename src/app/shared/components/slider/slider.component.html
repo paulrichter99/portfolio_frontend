@@ -10,7 +10,7 @@
             fill="none" stroke="#d9d9d9" [attr.stroke-width]="svgStrokeWidth" clip-path="url(#cut-off)"/>
           <circle class="percent circle"
             [attr.cx]="svgBaseWidth/2" [attr.cy]="svgBaseHeight/2" [attr.r]="svgBaseHeight/2 - svgStrokeWidth/2"
-            fill="none" [attr.stroke]="slide.skillColor" [attr.stroke-width]="svgStrokeWidth" clip-path="url(#cut-off)"
+            fill="none" [attr.stroke]="slide.skillColor" [attr.stroke-width]="svgStrokeWidth + 1" clip-path="url(#cut-off)"
             pathLength="100"
             [attr.stroke-dashoffset]="50 - slide.skillPercentage/2"/>
             <text  [attr.x]="svgBaseWidth/2" [attr.y]="svgBaseHeight/2 - svgFontSize/2"

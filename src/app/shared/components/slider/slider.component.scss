@@ -1,8 +1,10 @@
+@import "/src/app/shared/variables.scss";
+
 .slider{
     width: 100%;
     overflow: hidden;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(43, 43, 43);
+    color: $base-color;
 }
 
 .slider-wrapper{
@@ -22,15 +24,16 @@
 
 .slide-header {
   font-size: 20px;
-  width: min-content;
+  width: 30%;
+  min-width: fit-content;
+
   padding: 8px 30px;
   margin: 0 auto;
   margin-top: 10px;
-  color: rgb(44, 44, 44);
   letter-spacing: 2px;
-  border: 2px solid rgb(97, 97, 97);
   border-radius: 5px;
   font-weight: 500;
+  background-color: $base-color-bg-secondary;
 }
 
 .slide-description{
@@ -49,14 +52,14 @@
   // dots
   .navigation-bullet {
     border-radius: 50%;
-    border: 1px solid rgb(107, 107, 107);
+    border: 1px solid $base-color;
     width: 14px;
     height: 14px;
     margin: 0 5px;
   }
 
   .active-bullet {
-    background-color: rgb(122, 122, 122);
+    background-color: $base-color;
   }
 }
 
@@ -80,5 +83,5 @@
 
 svg > text {
   font-family: "KgTraditionalFractions";
-  fill: rgb(59, 59, 59);
+  fill: $base-color;
 }
