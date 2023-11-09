@@ -15,7 +15,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
   currentLastSlide = 4;
   // maximum number of slides to be displayed
   // - min-size is around 300px
-  currentMaxSlideNumbers: number = 4;
+  currentMaxSlideNumbers: number = 3;
   timeIntervalSeconds = 3;
   currentDesiredMarginLeft = 0;
 
@@ -23,8 +23,13 @@ export class SliderComponent implements OnInit, AfterViewInit {
   svgBaseHeight:number = 200;
   svgBaseWidth:number = 200;
   svgStrokeWidth: number = 12;
-  svgFontSize:number = 64;
+  svgFontSize:number = 50;
   innerWidth: any;
+  maxSliderElementWidth: number = 370;
+  minSliderElementWidth: number = 320;
+
+  maxSliderElementCombinedWidth: number = 0;
+  minSliderMarginValue: number = 20;
 
   ngOnInit() {
     this.innerWidth = window.innerWidth;
@@ -38,20 +43,35 @@ export class SliderComponent implements OnInit, AfterViewInit {
   @HostListener('window:resize', ['$event'])
   onResize(event:any) {
     this.innerWidth = window.innerWidth;
+    const combinedMinSliderWidth = this.minSliderElementWidth + this.minSliderMarginValue + 4;
+    const mySliderWidth = this.mySlider.nativeElement.offsetWidth - 10;
 
     // define max element width
-    const maxElementWidth = 300;
     // detect resize changes to get the slider to 0 again and recalculate the max
     //  number of slides
-    this.currentMaxSlideNumbers = Math.floor(this.mySlider.nativeElement.offsetWidth / maxElementWidth);
-    if(this.currentMaxSlideNumbers > 4) this.currentMaxSlideNumbers = 4;
+    // 1148 / 370
+    this.currentMaxSlideNumbers = Math.floor(mySliderWidth / combinedMinSliderWidth);
+    if(this.currentMaxSlideNumbers > 3) this.currentMaxSlideNumbers = 3;
 
-    const newMinWidth = (this.mySlider.nativeElement.offsetWidth  / this.currentMaxSlideNumbers) - 40;
+    // calculate the minWidth
+    var newMinWidth = (mySliderWidth  / this.currentMaxSlideNumbers);
+    var newMargin = "0";
 
+    // if min-width is > max-width (350), a margin will be applied that suits the width-ratio
+    if(newMinWidth > this.minSliderElementWidth && (newMinWidth - this.maxSliderElementWidth) > 20){
+      newMargin = "0 " + (newMinWidth - this.maxSliderElementWidth) / 2 + "px";
+      newMinWidth = this.maxSliderElementWidth;
+    }else if(newMinWidth > this.minSliderElementWidth){
+      newMargin = "0 " + (newMinWidth - this.minSliderElementWidth) / 2 + "px";
+      newMinWidth = this.minSliderElementWidth;
+    }
+
+    this.maxSliderElementCombinedWidth = (newMinWidth - this.maxSliderElementWidth) + newMinWidth;
     // resize the elements by passing a new max-width value relative to the screen width
     const sliderElements: HTMLCollectionOf<HTMLElement> = <HTMLCollectionOf<HTMLElement>> document.getElementsByClassName("slider-element");
     Array.from(sliderElements).forEach(element => {
       element.style.minWidth = newMinWidth.toString() + "px";
+      element.style.margin = newMargin;
     });
 
     this.currentFirstSlide = -1;
@@ -96,7 +116,6 @@ export class SliderComponent implements OnInit, AfterViewInit {
     // Calculate the new margin-left value in percentage
     const containerWidth = this.mySlider.nativeElement.offsetWidth;
     this.currentDesiredMarginLeft = currentMarginLeft - (containerWidth * (percentageToMove / 100));
-
     // Set the new margin-left value
     sliderWrapperElement.style.marginLeft = this.currentDesiredMarginLeft + 'px';
 

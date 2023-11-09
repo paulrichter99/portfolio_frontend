@@ -2,35 +2,41 @@ import { Person } from "./person";
 
 export const SLIDES = [
   {
-    "headerText": "Java",
+    "headerText": "JAVA",
     "descriptionText": "I gathered the most knowledge here and feel very comfortable using it",
-    "skillPercentage": 105,
-    "skillColor": "#188042"
+    "skillPercentage": 100,
+    "skillColor": "#a6331b"
+  },
+  {
+    "headerText": "SPRING",
+    "descriptionText": "Started working with it in 2019 - learned and still learning a lot since",
+    "skillPercentage": 90,
+    "skillColor": "#a6331b"
+  },
+  {
+    "headerText": "ANGULAR",
+    "descriptionText": "Almost all Frontend related projects by me are done with angular",
+    "skillPercentage": 85,
+    "skillColor": "#2a4ca3"
   },
   {
     "headerText": "HTML/CSS",
-    "descriptionText": "Since I am using Angular for almost all of my Frontend, I worked a lot with them",
+    "descriptionText": "I worked a lot with these in almost all of my Frontend projects",
     "skillPercentage": 85,
-    "skillColor": "#3c77d6"
+    "skillColor": "#2a4ca3"
   },
   {
     "headerText": "TS/JS",
     "descriptionText": "Using Angular I could gather a lot of knowledge here",
-    "skillPercentage": 80,
-    "skillColor": "#3c77d6"
+    "skillPercentage": 85,
+    "skillColor": "#2a4ca3"
   },
   {
-    "headerText": "Angular",
-    "descriptionText": "Almost all Frontend related projects by me are done with angular",
-    "skillPercentage": 80,
-    "skillColor": "#3c77d6"
-  },
-  {
-    "headerText": "Databases",
+    "headerText": "DATABASES",
     "descriptionText": "Working with Spring I have worked and administrated several Databases",
     "skillPercentage": 75,
-    "skillColor": "#97c712"
-  }
+    "skillColor": "#a6331b"
+  },
 ]
 
 export const MY_PERSON = new Person(
@@ -40,3 +46,6 @@ export const MY_PERSON = new Person(
   "Student | Software Developer",
   "Jena",
   "paulrichter.jena@gmail.com");
+
+export const HEADER_BACKGROUND = "#949494";
+export const HEADER_BACKGROUND_SECONDARY = "#4e5664";

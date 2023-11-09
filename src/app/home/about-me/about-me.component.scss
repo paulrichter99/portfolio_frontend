@@ -1,13 +1,6 @@
 @import "/src/app/shared/variables.scss";
 
 #about{
-  background: linear-gradient(129deg,
-    rgba(203,184,165,1) 0%,
-    rgba(232,220,208,1) 30%,
-    rgba(232,220,208,1) 50%,
-    rgba(232,220,208,1) 70%,
-    rgba(194,177,159,1) 100%
-  );
   background: $base-color-bg;
   color: $base-color;
   height: max-content;
@@ -23,8 +16,9 @@ b {
   font-size: 18px;
   min-height: calc(100vh - 60px);
   padding-top: 60px;
-  width: 80%;
+  width: 1300px;
   margin: 0 auto;
+  max-width: 80%;
 }
 
 #about-header-wrapper{
@@ -51,32 +45,44 @@ b {
 }
 
 #about-body-wrapper{
-  margin-top: 50px;
+  margin-top: 20px;
   max-width: 1450px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  padding: 30px 50px;
+
+  background-color: $base-color-bg-secondary;
+  box-shadow: 0px 3px 10px 1px rgba($base-color, 0.3);
+  border-radius: 3rem;
+  border: 2px solid rgba($base-color, 0.4);
 }
 
 /* On < 1750px we should realign about me under the image and skills section */
 
 #about-left-side-wrapper{
-  min-width: 700px;
+  min-width: 650px;
   height: min-content;
   align-self: center;
   margin-top: 10px;
 
+  flex: 1;
+
   img {
     width: 250px;
     height: 250px;
-    border-radius: 20px;
+    margin-right: 30px;
+    background-color: #586170;
+    box-shadow: 0px 0px 7px 2px rgba(#707985, 0.4);
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 10px;
   }
 
   > .justify-content-wrapper{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-right: 30px;
+    justify-content: right;
   }
 }
 
@@ -88,10 +94,11 @@ b {
     color: $base-color;
     font-weight: 500;
   }
+  margin-top: 20px;
 }
 
 #about-detail-table{
-  margin-left: 40px;
+  min-width: max-content;
   tr {
     margin: 5px 0;
   }
@@ -101,25 +108,28 @@ b {
   }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1349px){
   #about-body-wrapper{
     flex-direction: column;
+  }
+  #about-right-side-wrapper{
+    padding-top: 20px;
   }
 
 }
 
-/* TODO: row view for profile picture, side by side when about-right side goes down */
-@media (min-width: 1200px){
+@media (min-width: 1350px){
   #about-right-side-wrapper{
-    padding: 20px;
+    padding: 10px;
+    padding-left: 40px;
     padding-right: 0;
-    border-left: 2px solid rgb(143, 143, 143);
+    border-left: 2px solid $base-color;
+    margin-top: 0;
   }
 }
 
 
 #skills-list-wrapper {
   width: 100%;
-  margin-top: 40px;
-  margin-left: 10px;
+  margin-top: 30px;
 }

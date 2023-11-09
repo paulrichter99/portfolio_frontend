@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Person } from 'src/app/shared/objects/person';
 import { Slide } from 'src/app/shared/objects/slide';
 import { MY_PERSON, SLIDES } from 'src/app/shared/objects/variables';

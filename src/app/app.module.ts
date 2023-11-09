@@ -9,6 +9,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { AboutMeComponent } from './home/about-me/about-me.component';
 import { FrontpageComponent } from './home/frontpage/frontpage.component';
 import { SliderComponent } from './shared/components/slider/slider.component';
+import { ResumeComponent } from './home/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SliderComponent } from './shared/components/slider/slider.component';
     HomeComponent,
     AboutMeComponent,
     FrontpageComponent,
-    SliderComponent
+    SliderComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
