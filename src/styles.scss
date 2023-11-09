@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 @font-face {
   font-family: 'Brotherton';
   font-style: normal;
@@ -6,18 +9,11 @@
   src: url('./assets/fonts/brotherton.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'TiroGurmukhi';
-  font-style: normal;
-  font-weight: normal;
-  src: url('./assets/fonts/TiroGurmukhi-Regular.ttf') format('truetype');
-}
-
 body, html {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(233, 233, 233);
+  background-color: #e7d8cb;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   letter-spacing: 0.5px;

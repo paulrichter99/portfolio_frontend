@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Person } from 'src/app/shared/objects/person';
+import { Slide } from 'src/app/shared/objects/slide';
+import { MY_PERSON, SLIDES } from 'src/app/shared/objects/variables';
 
 @Component({
   selector: 'app-about-me',
@@ -8,17 +10,14 @@ import { Person } from 'src/app/shared/objects/person';
 })
 export class AboutMeComponent implements OnInit {
 
-  myPerson = new Person(
-    "Paul",
-    "Richter",
-    "08.07.1999",
-    "Student | Software Developer",
-    "Jena",
-    "paulrichter.jena@gmail.com");
+  myPerson = MY_PERSON;
   age: number = 30;
+
+  slides: Slide[] = [];
 
   ngOnInit(): void {
     this.calcAge();
+    this.generateSlides();
   }
 
 
@@ -34,5 +33,9 @@ export class AboutMeComponent implements OnInit {
         (new Date().getMonth() == myUser_birthMonth-1 && new Date().getDate() < myUser_birthDay)){
       this.age--;
     }
+  }
+
+  generateSlides(){
+    this.slides = SLIDES;
   }
 }

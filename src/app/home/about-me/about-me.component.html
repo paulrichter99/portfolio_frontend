@@ -1,14 +1,16 @@
 <section id="about">
   <div class="flex-element">
     <div id='about-me-wrapper'>
+      <!-- INFO: Not sure If I want to use this, since we have a header that shows where we are
       <div id='about-header-wrapper'>
         <div id='lower-layer-header'> ABOUT ME </div>
         <div id='upper-layer-header'> ABOUT ME </div>
       </div>
+      -->
       <div id='about-body-wrapper'>
         <div id='about-left-side-wrapper'>
           <div class='justify-content-wrapper'>
-            <img src="/assets/gfx/img_me.jpg">
+            <img src="/assets/gfx/img_me_2.png">
             <div id='about-info-wrapper'>
               <table id='about-detail-table'>
                 <tr>
@@ -39,9 +41,8 @@
             </div>
           </div>
         </div>
-
         <div id='about-right-side-wrapper'>
-          <div style="margin-bottom: 8px; font-family: brotherton; font-size: 40px; color: rgb(63, 63, 63); font-weight: 500;"> Hi, I am Paul </div>
+          <div> Hi! <span style="font-size: 26px;">I am Paul</span> </div>
           Learning my first language at the age of 12, coding should become my passion. <br>
           It all started with a small robotics project written in C - nothing really special, but the reason for
           my affection for coding and software development. <br> <br>
@@ -56,57 +57,8 @@
 
       <div id="skills-list-wrapper">
         <div>
-          <div style="text-align: center; margin-bottom: 8px; font-family: brotherton; font-size: 30px; color: rgb(63, 63, 63); font-weight: 500;"> <b> SKILLS </b> </div>
-          <div class='slider'>
-
-            <div class='slider-element'>
-              <div id='slider-java'>
-                Java is my home - 100%
-              </div>
-            </div>
-
-            <div class='slider-element'>
-              <div id='slider-java'>
-                Java is my home - 100%
-              </div>
-            </div>
-
-            <div class='slider-element'>
-              <div id='slider-java'>
-                Java is my home - 100%
-              </div>
-            </div>
-
-            <div class='slider-element'>
-              <div id='slider-java'>
-                Java is my home - 100%
-              </div>
-            </div>
-
-            <div class='slider-element'>
-              <div id='slider-java'>
-                Java is my home - 100%
-              </div>
-            </div>
-
-            <div class='slider-element'>
-              <div id='slider-java'>
-                Java is my home - 100%
-              </div>
-            </div>
-
-            <div class='slider-element'>
-              <div id='slider-java'>
-                Java is my home - 100%
-              </div>
-            </div>
-
-            <div class='slider-element'>
-              <div id='slider-java'>
-                Java is my home - 100%
-              </div>
-            </div>
-          </div>
+          <!--<div style="text-align: center; margin-bottom: 8px; font-family: brotherton; font-size: 30px; color: rgb(63, 63, 63); font-weight: 500;"> <b> SKILLS </b> </div> -->
+          <app-slider [slides]="slides"></app-slider>
         </div>
       </div>
     </div>

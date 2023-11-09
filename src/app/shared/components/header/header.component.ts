@@ -1,4 +1,5 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
+import { HEADER_BACKGROUND, HEADER_BACKGROUND_SECONDARY } from '../../objects/variables';
 
 @Component({
   selector: 'app-header',
@@ -24,5 +25,18 @@ export class HeaderComponent implements AfterViewInit{
         navEl.classList.add('active');
       })
     })
+  }
+
+  adjustHeader(isInitialState: boolean){
+    var header = document.getElementById("header-background");
+    if(!header){ return; }
+
+    if(isInitialState){
+      header.style.opacity = "0.15";
+      header.style.backgroundColor = HEADER_BACKGROUND;
+    }else{
+      header.style.opacity = "1";
+      header.style.backgroundColor = HEADER_BACKGROUND_SECONDARY;
+    }
   }
 }
