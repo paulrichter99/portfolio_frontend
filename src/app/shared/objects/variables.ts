@@ -3,25 +3,25 @@ import { Person } from "./person";
 export const SLIDES = [
   {
     "headerText": "JAVA",
-    "descriptionText": "I gathered the most knowledge here and feel very comfortable using it",
+    "descriptionText": "Über viele Jahre sehr viel Wissen angeeignet",
     "skillPercentage": 100,
     "skillColor": "#a6331b"
   },
   {
     "headerText": "SPRING",
-    "descriptionText": "Started working with it in 2019 - learned and still learning a lot since",
+    "descriptionText": "Seit 2020 meine Wahl für Backends",
     "skillPercentage": 90,
     "skillColor": "#a6331b"
   },
   {
     "headerText": "ANGULAR",
-    "descriptionText": "Almost all Frontend related projects by me are done with angular",
+    "descriptionText": "Benutze ich in fast allen Frontend-Projekten",
     "skillPercentage": 85,
     "skillColor": "#2a4ca3"
   },
   {
-    "headerText": "HTML/CSS",
-    "descriptionText": "I worked a lot with these in almost all of my Frontend projects",
+    "headerText": "HTML/SCSS",
+    "descriptionText": "Meine Go-To Frontend Werkzeuge",
     "skillPercentage": 85,
     "skillColor": "#2a4ca3"
   },
@@ -33,7 +33,7 @@ export const SLIDES = [
   },
   {
     "headerText": "DATABASES",
-    "descriptionText": "Working with Spring I have worked and administrated several Databases",
+    "descriptionText": "In unterschiedlichen Projekten genutzt und gemanaged",
     "skillPercentage": 75,
     "skillColor": "#a6331b"
   },
@@ -47,5 +47,9 @@ export const MY_PERSON = new Person(
   "Jena",
   "paulrichter.jena@gmail.com");
 
+  /*
 export const HEADER_BACKGROUND = "#949494";
 export const HEADER_BACKGROUND_SECONDARY = "#4e5664";
+  */
+export const HEADER_BACKGROUND = "#949494";
+export const HEADER_BACKGROUND_SECONDARY = "#555";

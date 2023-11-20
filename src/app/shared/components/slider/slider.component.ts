@@ -25,7 +25,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
   svgStrokeWidth: number = 12;
   svgFontSize:number = 50;
   innerWidth: any;
-  maxSliderElementWidth: number = 370;
+  maxSliderElementWidth: number = 350;
   minSliderElementWidth: number = 320;
 
   maxSliderElementCombinedWidth: number = 0;
