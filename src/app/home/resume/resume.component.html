@@ -1,3 +1,41 @@
 <section id="resume">
+  <div class="resume-wrapper">
+    <div class="resume-left-side">
 
+      <div
+        *ngFor="let element of leftSideElements; let i = index"
+        class="resume-element"
+        [ngStyle]="{'margin-top': i == 0 ?
+          (element.startYear - 2012 - i) * resumeElementOffset + 'px' :
+          calculateElementOffset(element, i, 0)}"
+      >
+        <div class="header"> {{element.title}}</div>
+        <div class="dot"> </div>
+        <div class="body">
+          <div *ngFor="let bodyElement of element.body">
+            <b *ngIf="bodyElement.includes('<b>')"> {{ splittedBodyElement(bodyElement) }} </b>
+            <div *ngIf="!bodyElement.includes('<b>')"> {{ bodyElement }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="resume-right-side">
+
+      <div
+        *ngFor="let element of rightSideElements; let i = index" class="resume-element"
+        [ngStyle]="{'margin-top': i == 0 ?
+          (element.startYear - 2012 - i) * resumeElementOffset + 'px' :
+          calculateElementOffset(element, i, 1)}"
+      >
+        <div class="header"> {{element.title}}</div>
+        <div class="dot"> </div>
+        <div class="body">
+          <div *ngFor="let bodyElement of element.body">
+            <b *ngIf="bodyElement.includes('<b>')"> {{ splittedBodyElement(bodyElement) }} </b>
+            <div *ngIf="!bodyElement.includes('<b>')"> {{ bodyElement }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

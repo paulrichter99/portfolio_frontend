@@ -15,10 +15,10 @@ export class AppComponent {
     var header = document.getElementById("header-background");
     if(e && header){
       if($event.deltaY > 0 && (document.body.scrollTop > e.offsetHeight - 200)){
-        header.style.opacity = "1";
+        header.style.opacity = "0.8";
         header.style.backgroundColor = HEADER_BACKGROUND_SECONDARY;
       }else if($event.deltaY < 0 && (document.body.scrollTop > e.offsetHeight)) {
-        header.style.opacity = "1";
+        header.style.opacity = "0.8";
         header.style.backgroundColor = HEADER_BACKGROUND_SECONDARY;
       }else{
         header.style.opacity = "0.15";

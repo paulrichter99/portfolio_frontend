@@ -35,7 +35,7 @@ export class HeaderComponent implements AfterViewInit{
       header.style.opacity = "0.15";
       header.style.backgroundColor = HEADER_BACKGROUND;
     }else{
-      header.style.opacity = "1";
+      header.style.opacity = "0.8";
       header.style.backgroundColor = HEADER_BACKGROUND_SECONDARY;
     }
   }

@@ -5,6 +5,8 @@ export class Slide {
     skillPercentage: number;
     skillColor: string
 
+    detailedDescriptionText? :string;
+
     constructor(headerText:string,
       descriptionText:string,
       skillPercentage: number,

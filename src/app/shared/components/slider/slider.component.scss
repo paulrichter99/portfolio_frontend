@@ -26,12 +26,12 @@ button{
 }
 
 .slider-element{
-  padding: 30px 0 40px 0;
+  padding: 20px 0 40px 0;
   text-align: center;
 
   background-color: $base-color-bg-secondary;
-  box-shadow: 0px 3px 10px 1px rgba($base-color, 0.3);
-  border: 2px solid rgba($base-color, 0.4);
+  box-shadow: $about-box-shadow;
+  border: 2px solid rgba($base-color-border, 0.4);
   border-radius: 3rem;
 }
 
@@ -42,13 +42,14 @@ button{
   padding: 10px 0;
   margin: 0 auto;
 
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   letter-spacing: 1px;
-  border-radius: 1rem;
   font-weight: 700;
   min-width: 60%;
-  background-color: #586170;
-  box-shadow: 0px 0px 10px 5px rgba(67, 75, 88, 0.2);
+  background-color: $base-color-bg-tertiary;
+
+  //border-radius: 1rem;
+  //box-shadow: $slider-header-box-shadow;
 
   font-family: 'Roboto', serif;
 }
@@ -70,14 +71,14 @@ button{
   // dots
   .navigation-bullet {
     border-radius: 50%;
-    border: 1px solid $base-color;
+    border: 1px solid $active-bullet-color;
     width: 14px;
     height: 14px;
     margin: 0 5px;
   }
 
   .active-bullet {
-    background-color: $base-color;
+    background-color: $active-bullet-color;
   }
 }
 
