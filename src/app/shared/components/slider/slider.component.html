@@ -1,34 +1,43 @@
 <div class='slider' id='slider' #slider>
   <div class='slider-wrapper' id='slider-wrapper'>
-    <div class="slider-element" *ngFor="let slide of slides;">
-      <div class="slide-header">  {{slide.headerText}} </div>
+    <div class="slider-element-wrapper" id="slider-element-wrapper" *ngFor="let slide of slides;">
+      <div class="slider-element" (click)="openSliderModal(slide)">
+        <app-slider-details id="{{slide.headerText}}"
+          [slide]="slide" style="display: none;"
+          (closeSliderModal)="closeSliderModal($event)"
+          (click)="$event.stopPropagation()"
+        > </app-slider-details>
+        <div class="slide-header">  {{slide.headerText}} </div>
 
-      <svg [attr.width]="svgBaseWidth" [attr.height]="svgBaseHeight/2">
-        <clipPath id="cut-off">
-          <rect x="0" y="0" [attr.width]="svgBaseWidth" [attr.height]="svgBaseHeight/2"/>
-        </clipPath>
-        <circle
-          [attr.cx]="svgBaseWidth/2" [attr.cy]="svgBaseHeight/2" [attr.r]="svgBaseHeight/2 - svgStrokeWidth/2"
-          fill="none" stroke="#d9d9d9" [attr.stroke-width]="svgStrokeWidth" clip-path="url(#cut-off)"/>
-        <circle class="percent circle"
-          [attr.cx]="svgBaseWidth/2" [attr.cy]="svgBaseHeight/2" [attr.r]="svgBaseHeight/2 - svgStrokeWidth/2"
-          fill="none" [attr.stroke]="slide.skillColor" [attr.stroke-width]="svgStrokeWidth + 1" clip-path="url(#cut-off)"
-          pathLength="99"
-          [attr.stroke-dashoffset]="50 - slide.skillPercentage/2"/>
-          <text  [attr.x]="svgBaseWidth/2" [attr.y]="svgBaseHeight/2 - svgFontSize/2 - 10"
-            text-anchor="middle" dominant-baseline="central"
-            [attr.font-size]="svgFontSize" font-weight="400">
-            {{slide.skillPercentage}}<tspan dy ="10" [attr.font-size]="svgFontSize/2">%</tspan>
-          </text>
-      </svg>
+        <svg [attr.width]="svgBaseWidth" [attr.height]="svgBaseHeight/2">
+          <clipPath id="cut-off">
+            <rect x="0" y="0" [attr.width]="svgBaseWidth" [attr.height]="svgBaseHeight/2"/>
+          </clipPath>
+          <circle
+            [attr.cx]="svgBaseWidth/2" [attr.cy]="svgBaseHeight/2" [attr.r]="svgBaseHeight/2 - svgStrokeWidth/2"
+            fill="none" stroke="#d9d9d9" [attr.stroke-width]="svgStrokeWidth" clip-path="url(#cut-off)"/>
+          <circle class="percent circle"
+            [attr.cx]="svgBaseWidth/2" [attr.cy]="svgBaseHeight/2" [attr.r]="svgBaseHeight/2 - svgStrokeWidth/2"
+            fill="none" [attr.stroke]="slide.skillColor" [attr.stroke-width]="svgStrokeWidth + 1" clip-path="url(#cut-off)"
+            pathLength="99"
+            [attr.stroke-dashoffset]="50 - slide.skillPercentage/2"/>
+            <text  [attr.x]="svgBaseWidth/2" [attr.y]="svgBaseHeight/2 - svgFontSize/2 - 10"
+              text-anchor="middle" dominant-baseline="central"
+              [attr.font-size]="svgFontSize" font-weight="400">
+              {{slide.skillPercentage}}<tspan dy ="10" [attr.font-size]="svgFontSize/2">%</tspan>
+            </text>
+        </svg>
 
-      <div class="slide-description"> {{slide.descriptionText}} </div>
+        <div class="slide-description" [innerHTML]="slide.descriptionText"> </div>
+      </div>
     </div>
   </div>
 </div>
 <div class='navigation-bullets-wrapper'>
-  <span *ngFor="let ele of slides; let i = index"
-        class="navigation-bullet" tabindex="{{i}}" role="button"
-        (click)="slideToIndex(i)">
-  </span>
+  <div class='bullet-element-wrapper' *ngFor="let ele of slides; let i = index">
+    <span
+    class="navigation-bullet" tabindex="{{i}}" role="button"
+    (click)="slideToIndex(i)">
+    </span>
+  </div>
 </div>
