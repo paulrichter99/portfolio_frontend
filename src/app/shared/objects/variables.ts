@@ -3,7 +3,7 @@ import { Person } from "./person";
 export const SLIDES = [
   {
     "headerText": "JAVA",
-    "descriptionText": "Über viele Jahre sehr viel Wissen angeeignet",
+    "descriptionText": "Über viele Jahre sehr viel <br> Wissen angeeignet",
     "skillPercentage": 100,
     "skillColor": "#a6331b",
     "detailedDescriptionText": [
@@ -97,7 +97,7 @@ export const SLIDES = [
   },
   {
     "headerText": "TS/JS",
-    "descriptionText": "Using Angular I could gather a lot of knowledge here",
+    "descriptionText": "Sehr viel Erfahrung durch <br> die Entwicklung in Angular",
     "skillPercentage": 85,
     "skillColor": "#2a4ca3",
     "detailedDescriptionText": [],
@@ -105,7 +105,7 @@ export const SLIDES = [
   },
   {
     "headerText": "DATABASES",
-    "descriptionText": "In unterschiedlichen Projekten genutzt und gemanaged",
+    "descriptionText": "In unterschiedlichen <br> Projekten genutzt/verwaltet",
     "skillPercentage": 75,
     "skillColor": "#a6331b",
     "detailedDescriptionText": [],

@@ -35,9 +35,21 @@ button{
   border-radius: 3rem;
 }
 
+.slider-element:hover{
+  box-shadow: 0px 3px 15px 4px rgba($base-color, 0.2);
+  background-color: $base-color-bg-secondary-hover;
+  .slide-header {
+    font-size: 24px;
+  }
+  .slide-description{
+    font-weight: 400;
+  }
+}
+
 .slide-header {
   font-size: 22px;
   width: 30%;
+  height: 30px;
   min-width: fit-content;
   padding: 10px 0;
   margin: 0 auto;
@@ -46,7 +58,6 @@ button{
   letter-spacing: 1px;
   font-weight: 700;
   min-width: 60%;
-  background-color: $base-color-bg-tertiary;
 
   //border-radius: 1rem;
   //box-shadow: $slider-header-box-shadow;
@@ -75,6 +86,10 @@ button{
     width: 14px;
     height: 14px;
     margin: 0 5px;
+  }
+  // dots hover
+  .navigation-bullet:hover {
+    border: 3px solid $active-bullet-color;
   }
 
   .active-bullet {
