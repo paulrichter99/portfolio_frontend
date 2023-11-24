@@ -10,6 +10,7 @@ import { AboutMeComponent } from './home/about-me/about-me.component';
 import { FrontpageComponent } from './home/frontpage/frontpage.component';
 import { SliderComponent } from './shared/components/slider/slider.component';
 import { ResumeComponent } from './home/resume/resume.component';
+import { SliderDetailsComponent } from './shared/components/slider-details/slider-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ResumeComponent } from './home/resume/resume.component';
     AboutMeComponent,
     FrontpageComponent,
     SliderComponent,
-    ResumeComponent
+    ResumeComponent,
+    SliderDetailsComponent
   ],
   imports: [
     BrowserModule,

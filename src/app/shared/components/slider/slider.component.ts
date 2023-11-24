@@ -147,4 +147,19 @@ export class SliderComponent implements OnInit, AfterViewInit {
     // console.log("sliding to index " + index)
     this.slideRight(index);
   }
+
+  openSliderModal(slide: Slide){
+    var el = document.getElementById(slide.headerText);
+    this.setSliderDisplay(el, "flex");
+  }
+
+  closeSliderModal(slide: Slide){
+    var el = document.getElementById(slide.headerText);
+    this.setSliderDisplay(el, "none");
+  }
+
+  setSliderDisplay(element: HTMLElement | null, value: string){
+    if(!element) return;
+    element.style.setProperty("display", value);
+  }
 }

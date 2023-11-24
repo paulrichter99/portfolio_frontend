@@ -1,6 +1,11 @@
 <div class='slider' id='slider' #slider>
   <div class='slider-wrapper' id='slider-wrapper'>
-    <div class="slider-element" *ngFor="let slide of slides;">
+    <div class="slider-element" *ngFor="let slide of slides;" (click)="openSliderModal(slide)">
+      <app-slider-details id="{{slide.headerText}}"
+        [slide]="slide" style="display: none;"
+        (closeSliderModal)="closeSliderModal($event)"
+        (click)="$event.stopPropagation()"
+      > </app-slider-details>
       <div class="slide-header">  {{slide.headerText}} </div>
 
       <svg [attr.width]="svgBaseWidth" [attr.height]="svgBaseHeight/2">

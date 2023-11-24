@@ -1,0 +1,22 @@
+<div class="slider-detail-wrapper" (click)="closeSlideDetailModal()">
+  <div class="slider-detail-content" (click)="$event.stopPropagation()">
+    <div class="slider-detail-header">
+      <div class="slide-title" [innerHTML]="slide!.fontAwesomeIcon + slide!.headerText"> </div>
+      <div class="slide-skill-percentage">
+        <div class="slide-skill-percentage-fill"
+          [ngStyle]="{'background-color': slide!.skillColor, 'width': slide!.skillPercentage + '%'}">
+          <div>{{slide?.skillPercentage}} % </div>
+        </div>
+      </div>
+
+    </div>
+    <div *ngIf="slide?.detailedDescriptionText?.length != 0" class="slider-detail-text-wrapper">
+      <div *ngFor="let textElement of slide?.detailedDescriptionText" class="slider-detail-text">
+        <div [innerHtml]="textElement"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal-background" (click)="closeSlideDetailModal()"> </div>
