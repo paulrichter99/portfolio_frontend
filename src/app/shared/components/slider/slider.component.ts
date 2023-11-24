@@ -16,7 +16,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
   // maximum number of slides to be displayed
   // - min-size is around 300px
   currentMaxSlideNumbers: number = 3;
-  timeIntervalSeconds = 3;
+  timeIntervalSeconds = 5;
   currentDesiredMarginLeft = 0;
 
   //svg-attributes
@@ -33,7 +33,8 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.innerWidth = window.innerWidth;
-    //setInterval(()=> { this.slideRight() }, this.timeIntervalSeconds * 1000);
+    // Auto sliding right every {{this.timeIntervalSeconds}} seconds
+    // setInterval(()=> { this.slideRight() }, this.timeIntervalSeconds * 1000);
   }
 
   ngAfterViewInit(): void {
@@ -44,34 +45,23 @@ export class SliderComponent implements OnInit, AfterViewInit {
   onResize(event:any) {
     this.innerWidth = window.innerWidth;
     const combinedMinSliderWidth = this.minSliderElementWidth + this.minSliderMarginValue + 4;
-    const mySliderWidth = this.mySlider.nativeElement.offsetWidth - 10;
+    const mySliderWidth = this.mySlider.nativeElement.offsetWidth;
 
     // define max element width
     // detect resize changes to get the slider to 0 again and recalculate the max
     //  number of slides
-    // 1148 / 370
     this.currentMaxSlideNumbers = Math.floor(mySliderWidth / combinedMinSliderWidth);
     if(this.currentMaxSlideNumbers > 3) this.currentMaxSlideNumbers = 3;
 
     // calculate the minWidth
     var newMinWidth = (mySliderWidth  / this.currentMaxSlideNumbers);
-    var newMargin = "0";
-
-    // if min-width is > max-width (350), a margin will be applied that suits the width-ratio
-    if(newMinWidth > this.minSliderElementWidth && (newMinWidth - this.maxSliderElementWidth) > 20){
-      newMargin = "0 " + (newMinWidth - this.maxSliderElementWidth) / 2 + "px";
-      newMinWidth = this.maxSliderElementWidth;
-    }else if(newMinWidth > this.minSliderElementWidth){
-      newMargin = "0 " + (newMinWidth - this.minSliderElementWidth) / 2 + "px";
-      newMinWidth = this.minSliderElementWidth;
-    }
 
     this.maxSliderElementCombinedWidth = (newMinWidth - this.maxSliderElementWidth) + newMinWidth;
     // resize the elements by passing a new max-width value relative to the screen width
-    const sliderElements: HTMLCollectionOf<HTMLElement> = <HTMLCollectionOf<HTMLElement>> document.getElementsByClassName("slider-element");
+    const sliderElements: HTMLCollectionOf<HTMLElement> =
+      <HTMLCollectionOf<HTMLElement>> document.getElementsByClassName("slider-element-wrapper");
     Array.from(sliderElements).forEach(element => {
       element.style.minWidth = newMinWidth.toString() + "px";
-      element.style.margin = newMargin;
     });
 
     this.currentFirstSlide = -1;
@@ -123,24 +113,34 @@ export class SliderComponent implements OnInit, AfterViewInit {
   }
 
   adjustActiveNavigationBulletElement(lastSlideIndex : number){
-    const navigationBullets = document.getElementsByClassName("navigation-bullet");
-    const navBulletArray = Array.from(navigationBullets)
+    const navigationBulletWrapperElements = document.getElementsByClassName("bullet-element-wrapper");
+    const navBulletWrapperArray = Array.from(navigationBulletWrapperElements)
 
     if(lastSlideIndex < 0) {
       // reset the whole procedure to initial state
-      navBulletArray.forEach((element, i) => {
-        // remove the active-bullet every element and make them invisible
-        element.classList.remove("active-bullet");
+      navBulletWrapperArray.forEach((element, i) => {
+        //differentiate between the actual visible bullet and the wrapper element
+        const navBullet: HTMLElement = <HTMLElement> element.firstChild;
+
+        // remove the active-bullet from every child and make the wrapper invisible
+        navBullet.classList.remove("active-bullet");
         element.classList.add("invisible");
         if(i < (this.slides!.length - this.currentMaxSlideNumbers + 1)){
+          // remove invisibility from wrapper if bullet should be usable
           element.classList.remove("invisible");
         }
       })
-      navBulletArray[0].classList.add("active-bullet");
+      const currentFirstSlideElement = <HTMLElement> navBulletWrapperArray[0].firstChild;
+      // make the first bullet the active bullet
+      currentFirstSlideElement.classList.add("active-bullet");
       return;
     }
-    navBulletArray[lastSlideIndex].classList.remove("active-bullet")
-    navBulletArray[this.currentFirstSlide].classList.add("active-bullet");
+    const lasSlideIndexElement = <HTMLElement> navBulletWrapperArray[lastSlideIndex].firstChild;
+    const currentFirstSlideElement = <HTMLElement> navBulletWrapperArray[this.currentFirstSlide].firstChild;
+    // make first bullet active bullet and remove active bullet from last bullet
+    // Note: that is important for auto moving right
+    lasSlideIndexElement.classList.remove("active-bullet")
+    currentFirstSlideElement.classList.add("active-bullet");
   }
 
   slideToIndex(index : number){
