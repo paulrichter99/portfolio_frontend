@@ -25,7 +25,7 @@ export const SLIDES = [
       , "Bis heute arbeite ich privat und im Berufsumfeld fast täglich mit Java und kann behaupten die Sprache\
         sehr gut zu beherrschen."
     ],
-    "fontAwesomeIcon" : "<i class='fa-brands fa-java fontawesome-icon centered-icon'></i>"
+    "fontAwesomeIcon" : "<i class='fa-brands fa-java slider-fontawesome-icon slider-centered-icon'></i>"
   },
   {
     "headerText": "SPRING",
@@ -56,7 +56,7 @@ export const SLIDES = [
       Die Sicherheit im Umgang mit Spring ist für mich eine solide Basis, \
       auf der ich weiter aufbauen und meine Fähigkeiten kontinuierlich erweitern möchte."
     ],
-    "fontAwesomeIcon" : "<i class='fa-solid fa-leaf fontawesome-icon smaller-icon'></i>"
+    "fontAwesomeIcon" : "<i class='fa-solid fa-leaf slider-fontawesome-icon slider-smaller-icon'></i>"
   },
   {
     "headerText": "ANGULAR",
@@ -85,7 +85,7 @@ export const SLIDES = [
       ,"Trotz meiner Sicherheit im Umgang mit Angular bin ich mir bewusst, \
       dass kontinuierliche Praxis notwendig ist, um mein Skillset und Wissen weiter zu vertiefen."
     ],
-    "fontAwesomeIcon" : "<i class='fa-brands fa-angular fontawesome-icon'></i>"
+    "fontAwesomeIcon" : "<i class='fa-brands fa-angular slider-fontawesome-icon'></i>"
   },
   {
     "headerText": "HTML/SCSS",
@@ -93,7 +93,7 @@ export const SLIDES = [
     "skillPercentage": 85,
     "skillColor": "#2a4ca3",
     "detailedDescriptionText": [],
-    "fontAwesomeIcon" : "<i class='fa-brands fa-html5 fontawesome-icon'></i>"
+    "fontAwesomeIcon" : "<i class='fa-brands fa-html5 slider-fontawesome-icon'></i>"
   },
   {
     "headerText": "TS/JS",
@@ -101,7 +101,7 @@ export const SLIDES = [
     "skillPercentage": 85,
     "skillColor": "#2a4ca3",
     "detailedDescriptionText": [],
-    "fontAwesomeIcon" : "<i class='fa-brands fa-js fontawesome-icon'></i>"
+    "fontAwesomeIcon" : "<i class='fa-brands fa-js slider-fontawesome-icon'></i>"
   },
   {
     "headerText": "DATABASES",
@@ -109,7 +109,7 @@ export const SLIDES = [
     "skillPercentage": 75,
     "skillColor": "#a6331b",
     "detailedDescriptionText": [],
-    "fontAwesomeIcon" : "<i class='fa-solid fa-database fontawesome-icon smaller-icon centered-icon'></i>"
+    "fontAwesomeIcon" : "<i class='fa-solid fa-database slider-fontawesome-icon slider-smaller-icon slider-centered-icon'></i>"
   },
 ]
 

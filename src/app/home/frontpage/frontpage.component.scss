@@ -1,7 +1,7 @@
 @import "/src/app/shared/variables.scss";
 
 #frontpage-wrapper{
-  color:rgb(241, 241, 241);
+  color: #f3f0e2;
   padding-right: 40px;
   width: 100%;
   height: $base-height;
@@ -31,97 +31,6 @@
 #name {
   margin-top: 270px;
 }
-/*  We ignore responsiveness atm, will be added later
-
-@media (max-width: 700px){
-  #hero-wrapper {
-    text-align: center;
-    width: 100%;
-  }
-
-  #socials-wrapper{
-    width: 100%;
-    margin-left: 0;
-    margin-top:20px;
-  }
-
-  #socials-wrapper > a > i{
-    background-color: rgb(255, 255, 255);
-    color: rgb(49, 49, 49);
-  }
-
-  #name {
-    margin-top: calc(60px + 5vh);
-  }
-
-  #profession {
-    display: none;
-  }
-}
-*/
-/*
-@media (max-width: 1200px){
-  @media (min-width: 700px){
-    #hero-wrapper {
-      margin-left: 100px;
-    }
-
-    #name {
-      margin-top: 250px;
-    }
-
-    #frontpage-wrapper{
-      color: rgb(255, 255, 255);
-      background: url("/assets/gfx/img_bg_3.jpg");
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-position: center top;
-    }
-  }
-
-  @media (min-width: 880px){
-    #hero-wrapper {
-      margin-left: 150px;
-    }
-  }
-
-  @media (min-width: 1000px){
-    #hero-wrapper {
-      margin-left: 240px;
-    }
-  }
-
-}
-
-@media (min-width: 1200px){
-
-}
-
-@media (min-width: 1300px){
-  #hero-wrapper {
-    margin-left: 180px;
-  }
-}
-
-@media (min-width: 1400px){
-  #hero-wrapper {
-    margin-left: 200px;
-  }
-}
-
-@media (min-width: 1550px){
-  #hero-wrapper {
-    margin-left: 300px;
-  }
-}
-
-@media (min-width: 1800px){
-  #hero-wrapper {
-    margin-left: 430px;
-  }
-}
-
-*/
 
 #hero{
   width: 100%;
@@ -146,8 +55,8 @@
 }
 
 #socials-wrapper > a > i{
-  background-color: rgb(255, 255, 255);
-  color: rgb(41, 41, 41);
+  background-color: #f3f0e2;
+  color: #000000;
   border-radius: 50%;
   display: flex;
   justify-content: center;
