@@ -1,21 +1,31 @@
-<div class="slider-detail-wrapper" (click)="closeSlideDetailModal()">
+<div *ngIf="this.slide != null" class="slider-detail-wrapper" (click)="closeSlideDetailModal()">
   <div class="slider-detail-content" (click)="$event.stopPropagation()">
     <div class="slider-detail-header">
       <div class="slide-title" [innerHTML]="slide!.fontAwesomeIcon + slide!.headerText"> </div>
-      <div class="slide-skill-percentage">
+      <div *ngIf="slide!.skillPercentage > 0" class="slide-skill-percentage">
         <div class="slide-skill-percentage-fill"
           [ngStyle]="{'background-color': slide!.skillColor, 'width': slide!.skillPercentage + '%'}">
-          <div>{{slide?.skillPercentage}} % </div>
+          <div>{{slide.skillPercentage}} % </div>
         </div>
       </div>
 
     </div>
     <div *ngIf="slide?.detailedDescriptionText?.length != 0" class="slider-detail-text-wrapper">
       <div *ngFor="let textElement of slide?.detailedDescriptionText" class="slider-detail-text">
-        <div [innerHtml]="textElement"></div>
+        <div style="display: block;" [innerHtml]="textElement"></div>
       </div>
+      <div class='img-wrapper-div' *ngIf="slide!.exampleImagesUrls">
+        <img *ngFor="let exampleImageUrl of slide?.exampleImagesUrls" src="{{exampleImageUrl}}"
+          (click)="openImageModal(exampleImageUrl);">
+      </div>
+      <div class='padding-bot' *ngIf="!(slide!.exampleImagesUrls)"> </div>
     </div>
+  </div>
+</div>
 
+<div id="image-modal" *ngIf="this.currentImageUrl" (click)="$event.stopPropagation(); this.closeImageModal()">
+  <div class="image-wrapper">
+    <img src="{{currentImageUrl}}" (click)="$event.stopPropagation()">
   </div>
 </div>
 

@@ -21,6 +21,11 @@ body, html {
   margin: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 
@@ -64,4 +69,43 @@ body, html {
 .resume-fontawesome-larger-icon {
   font-size: 30px;
   margin-top: 0px;
+}
+
+.resume-slider-opener{
+  color: $base-link-color;
+}
+
+.resume-slider-opener:hover{
+  font-size: 17px;
+}
+
+.slide-title {
+  img {
+    max-height: 60px;
+  }
+
+  .smaller-img{
+    max-height: 42px;
+    margin-right: 10px;
+  }
+
+  .header-img{
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .bigger-img{
+    max-height: 70px;
+    margin-right: 20px;
+    background-color: rgb(149, 150, 144);
+    border-radius: 50%;
+  }
+}
+
+.slider-detail-text{
+  a {
+    color: $base-link-color;
+    font-weight: 500;
+    text-decoration: none;
+  }
 }

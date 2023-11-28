@@ -12,9 +12,7 @@
           <div class="header"> {{element.title}}</div>
           <div class="dot" *ngIf="element.icon" [innerHTML]="element.icon"> </div>
           <div class="body">
-            <div *ngFor="let bodyElement of element.body">
-              <b *ngIf="bodyElement.includes('<b>')"> {{ splittedBodyElement(bodyElement) }} </b>
-              <div *ngIf="!bodyElement.includes('<b>')"> {{ bodyElement }} </div>
+            <div *ngFor="let bodyElement of element.body" [innerHTML]="bodyElement">
             </div>
           </div>
         </div>
@@ -32,13 +30,16 @@
           <div class="header"> {{element.title}}</div>
           <div class="dot" *ngIf="element.icon" [innerHTML]="element.icon"> </div>
           <div class="body">
-            <div *ngFor="let bodyElement of element.body">
-              <b *ngIf="bodyElement.includes('<b>')"> {{ splittedBodyElement(bodyElement) }} </b>
-              <div *ngIf="!bodyElement.includes('<b>')"> {{ bodyElement }} </div>
+            <div *ngFor="let bodyElement of element.body" [innerHTML]="bodyElement">
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <app-slider-details id="app-slider-details"
+          [slide]="this.currentSlide" style="display: none;"
+          (closeSliderModal)="closeSliderModal($event)"
+          (click)="$event.stopPropagation()"
+  > </app-slider-details>
 </section>

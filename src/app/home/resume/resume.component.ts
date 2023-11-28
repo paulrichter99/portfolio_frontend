@@ -1,34 +1,66 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { SliderDetailsComponent } from 'src/app/shared/components/slider-details/slider-details.component';
 import { ResumeElement } from 'src/app/shared/objects/resumeElement';
+import { Slide } from 'src/app/shared/objects/slide';
+import { RESUME_SLIDES } from 'src/app/shared/objects/variables';
 
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss']
 })
-export class ResumeComponent {
+export class ResumeComponent implements AfterViewInit, OnInit{
+
+  ngOnInit(): void {
+    for(let i = 0; i < RESUME_SLIDES.length; i++){
+      let img = new Image();
+      RESUME_SLIDES[i].exampleImagesUrls?.forEach(url => {
+        img.src = url;
+        this.loaded();
+      });
+    }
+  }
+
+  loadedImages: number = 0;
+
+  loaded(){
+    this.loadedImages++;
+  }
+
+  ngAfterViewInit(): void {
+    var elements = document.getElementsByClassName('resume-slider-opener')
+
+    var elementArray: HTMLElement[] = <HTMLElement[]> Array.from(elements);
+    elementArray.forEach(ele => {
+      const eleValue = ele.attributes.getNamedItem('value')?.value;
+      if(eleValue != "" && eleValue){
+        ele.addEventListener('click', openSlider => { this.showSliderDetailsComponent(eleValue) })
+      }
+    })
+  }
+
   leftSideElements: ResumeElement[] = [
     {
       title: "März 2023 - heute",
-      body: ["<b>Werkstudent Softwareentwicklung" ,"Navimatix GmbH"],
+      body: ["<b>Werkstudent Softwareentwicklung</b>" ,"<b class='resume-slider-opener' value='navimatix'>Navimatix GmbH</b>"],
       startYear: 2012,
       icon: "<i class='fa-solid fa-briefcase resume-fontawesome-icon'></i>"
     },{
       title: "April 2021 - 10/2022",
-      body: ["<b>Werkstudent Softwareentwicklung" ,"Smart Commerce SE"],
+      body: ["<b>Werkstudent Softwareentwicklung</b>" ,"<b class='resume-slider-opener' value='smartcommerce'>Smart Commerce SE</b>"],
       startYear: 2014,
       icon: "<i class='fa-solid fa-briefcase resume-fontawesome-icon'></i>"
     },{
       title: "2018 - heute",
-      body: ["<b>Ehrenamtliches Engagement", "Taekwondo Union Thüringen - Technikteam"],
+      body: ["<b>Ehrenamtliches Engagement im Sport</b>", "<b class='resume-slider-opener' value='tut'>Taekwondo Union Thüringen</b>"],
       startYear: 2016.5
     },{
       title: "2017 - 2023",
-      body: ["Friedrich-Schiller-Universität Jena", "Informatik Studium (B.Sc.)"],
+      body: ["<b>Friedrich-Schiller-Universität Jena</b>", "<b class='resume-slider-opener' value='uni'>Informatik Studium (B.Sc.)</b>"],
       startYear: 2017
     },{
       title: "2009 - 2017",
-      body: ["Georg-Samuel-Dörffel-Gymnasium Weida", "Abitur mit Schnitt 2.1"],
+      body: ["<b>Georg-Samuel-Dörffel-Gymnasium Weida</b>", "Abitur mit Schnitt 2.1"],
       startYear: 2021,
       icon: "<i class='fa-solid fa-graduation-cap resume-fontawesome-icon resume-fontawesome-smaller-icon'></i>"
     }
@@ -37,12 +69,12 @@ export class ResumeComponent {
   rightSideElements: ResumeElement[] = [
     {
       title: "2022",
-      body: ["Projekt für die Taekwondo Union Thüringen", "<b> Projektname \"Digital-TA-Paper\""],
+      body: ["<b>Projekt für die Taekwondo Union Thüringen</b>", "<b class='resume-slider-opener' value='digitalta'> Projektname \"Digital-TA-Paper\" </b>"],
       startYear: 2013,
       icon: "<i class='fa-brands fa-github resume-fontawesome-icon resume-fontawesome-larger-icon'></i>"
     },{
       title: "2020",
-      body: ["Erstes großes privates Projekt", "<b> Projektname \"RACEIT\""],
+      body: ["<b>Erstes großes privates Projekt</b>", "<b class='resume-slider-opener' value='raceit'> Projektname \"RACEIT\" </b>"],
       startYear: 2015,
       icon: "<i class='fa-solid fa-car resume-fontawesome-icon'></i>"
     },{
@@ -62,7 +94,7 @@ export class ResumeComponent {
       icon: "<i class='fa-solid fa-baby resume-fontawesome-icon resume-fontawesome-larger-icon'></i>"
     },{
       title: "2011",
-      body: ["Erste Schritte in der Programmierung", "Robotikprojekt 'Adurino' programmiert in C"],
+      body: ["<b>Erste Schritte in der Programmierung</b>", "Robotikprojekt 'Adurino' programmiert in C"],
       startYear: 2020,
       icon: "<i class='fa-solid fa-robot resume-fontawesome-icon resume-fontawesome-smaller-icon'></i>"
     },
@@ -86,13 +118,33 @@ export class ResumeComponent {
       sideElements = this.leftSideElements;
     }
     var offsetNumber = (element.startYear - sideElements[0].startYear) * (this.resumeElementOffset);
-    console.log(offsetNumber)
     if(offsetNumber < 0) offsetNumber = 0;
     return offsetNumber + 'px'
   }
 
-  splittedBodyElement(element: string){
-    var newElement = element.replace("<b>", "");
-    return newElement;
+  currentSlide: Slide | null = null;
+  showSliderDetailsComponent(slideName: string){
+    if(slideName == "") return;
+    RESUME_SLIDES.forEach(slide => {
+      if(slide.descriptionText.toLowerCase().includes(slideName)){
+        this.currentSlide = slide;
+      }
+    })
+    if(this.currentSlide != null){
+      var el = document.getElementById("app-slider-details");
+      this.setSliderDisplay(el, "flex");
+    }
+    return;
+  }
+
+  closeSliderModal(slide: Slide){
+    this.currentSlide = null;
+    var el = document.getElementById("app-slider-details");
+    this.setSliderDisplay(el, "none");
+  }
+
+  setSliderDisplay(element: HTMLElement | null, value: string){
+    if(!element) return;
+    element.style.setProperty("display", value);
   }
 }
