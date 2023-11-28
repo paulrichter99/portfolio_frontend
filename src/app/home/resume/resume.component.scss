@@ -5,7 +5,7 @@
   width: 100%;
   padding-bottom: 60px;
   background-color: $base-color-bg;
-  color: $base-color;
+  color: $resume-base-color;
 }
 
 .resume-wrapper{
@@ -27,57 +27,89 @@
   }
 
   .resume-left-side{
-    border-right: 2px solid $base-color;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 
-    .resume-element{
-      text-align: right;
+    border-right: 2px solid $base-color-border;
+    .resume-element-wrapper{
+      .resume-element{
+        text-align: right;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
 
-      .dot{
-        float: right;
+        .dot{
+          left: calc(100% - 19px);
+        }
       }
     }
   }
 
   .resume-right-side{
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
-    border-left: 2px solid $base-color;
 
-    .resume-element{
-      text-align: left;
+    border-left: 2px solid $base-color-border;
+    .resume-element-wrapper{
+      .resume-element{
+        text-align: left;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        .dot{
+          right: calc(100% - 19px);
+        }
+      }
     }
   }
+  .resume-element-wrapper{
+    height: 120px;
+    display: flex;
+    align-items: center;
 
-  .resume-element{
-    position: relative;
-    max-width: 600px;
-    width: fit-content;
-    max-height: 80px;
-    min-height: 80px;
+    .resume-element{
+      position: relative;
+      max-width: 600px;
+      width: fit-content;
+      max-height: 80px;
+      min-height: 80px;
 
-    .header{
-      padding: 0 40px;
-      border-bottom: 2px solid $base-color;
-      font-weight: 500;
-      font-size: 18px;
-    }
+      padding: 10px 10px 5px 10px;
 
-    .dot{
-      width: 13px;
-      height: 13px;
-      border-radius: 50%;
-      margin: 0 -8px;
-      margin-top: -6.5px;
-      background-color: $base-color;
-      z-index: 100;
-    }
+      box-shadow: $resume-box-shadow;
 
-    .body{
-      padding: 0 40px;
-      font-size: 16px;
+      background-color: $resume-element-bg;
+
+      .header{
+        padding: 0 40px;
+        border-bottom: 2px solid $base-color-border;
+        font-weight: 700;
+        font-size: 17px;
+      }
+
+      .dot{
+        border-radius: 50%;
+        z-index: 100;
+
+        background-color: $base-color-border;
+        border: 3px solid $base-color-border;
+
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        top: 13px;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+      }
+
+      .body {
+        padding: 0 40px;
+        font-size: 16px;
+      }
     }
   }
 }

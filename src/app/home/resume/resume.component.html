@@ -1,41 +1,45 @@
 <section id="resume">
   <div class="resume-wrapper">
     <div class="resume-left-side">
-
       <div
         *ngFor="let element of leftSideElements; let i = index"
-        class="resume-element"
+        class="resume-element-wrapper"
         [ngStyle]="{'margin-top': i == 0 ?
-          (element.startYear - 2012 - i) * resumeElementOffset + 'px' :
-          calculateElementOffset(element, i, 0)}"
+        calculateInitialElementOffset(element, 0) :
+        calculateElementOffset(element, i, 0)}"
       >
-        <div class="header"> {{element.title}}</div>
-        <div class="dot"> </div>
-        <div class="body">
-          <div *ngFor="let bodyElement of element.body">
-            <b *ngIf="bodyElement.includes('<b>')"> {{ splittedBodyElement(bodyElement) }} </b>
-            <div *ngIf="!bodyElement.includes('<b>')"> {{ bodyElement }} </div>
+        <div class="resume-element">
+          <div class="header"> {{element.title}}</div>
+          <div class="dot" *ngIf="element.icon" [innerHTML]="element.icon"> </div>
+          <div class="body">
+            <div *ngFor="let bodyElement of element.body" [innerHTML]="bodyElement">
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="resume-right-side">
-
       <div
-        *ngFor="let element of rightSideElements; let i = index" class="resume-element"
+        *ngFor="let element of rightSideElements; let i = index"
+        class="resume-element-wrapper"
         [ngStyle]="{'margin-top': i == 0 ?
-          (element.startYear - 2012 - i) * resumeElementOffset + 'px' :
-          calculateElementOffset(element, i, 1)}"
+        calculateInitialElementOffset(element, 1) :
+        calculateElementOffset(element, i, 1)}"
       >
-        <div class="header"> {{element.title}}</div>
-        <div class="dot"> </div>
-        <div class="body">
-          <div *ngFor="let bodyElement of element.body">
-            <b *ngIf="bodyElement.includes('<b>')"> {{ splittedBodyElement(bodyElement) }} </b>
-            <div *ngIf="!bodyElement.includes('<b>')"> {{ bodyElement }} </div>
+        <div class="resume-element">
+          <div class="header"> {{element.title}}</div>
+          <div class="dot" *ngIf="element.icon" [innerHTML]="element.icon"> </div>
+          <div class="body">
+            <div *ngFor="let bodyElement of element.body" [innerHTML]="bodyElement">
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <app-slider-details id="app-slider-details"
+          [slide]="this.currentSlide" style="display: none;"
+          (closeSliderModal)="closeSliderModal($event)"
+          (click)="$event.stopPropagation()"
+  > </app-slider-details>
 </section>

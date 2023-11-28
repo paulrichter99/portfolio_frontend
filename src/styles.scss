@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import "/src/app/shared/variables.scss";
 
 @font-face {
   font-family: 'Brotherton';
@@ -20,6 +21,11 @@ body, html {
   margin: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 
@@ -35,17 +41,71 @@ body, html {
   scrollbar-width: none;  /* Firefox */
 }
 
-
-.fontawesome-icon {
+.slider-fontawesome-icon {
   margin-right: 15px;
   font-size: 38px;
   margin-top: 4px;
 }
 
-.smaller-icon{
+.slider-smaller-icon{
   font-size: 32px !important;
 }
 
-.centered-icon{
+.slider-centered-icon{
   margin-top: 0;
+}
+
+.resume-fontawesome-icon{
+  font-size: 26px;
+  margin-top: -3px;
+  color: $resume-element-bg;
+}
+
+.resume-fontawesome-smaller-icon {
+  font-size: 24px;
+  margin-top: 0px;
+}
+
+.resume-fontawesome-larger-icon {
+  font-size: 30px;
+  margin-top: 0px;
+}
+
+.resume-slider-opener{
+  color: $base-link-color;
+}
+
+.resume-slider-opener:hover{
+  font-size: 17px;
+}
+
+.slide-title {
+  img {
+    max-height: 60px;
+  }
+
+  .smaller-img{
+    max-height: 42px;
+    margin-right: 10px;
+  }
+
+  .header-img{
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .bigger-img{
+    max-height: 70px;
+    margin-right: 20px;
+    background-color: rgb(149, 150, 144);
+    border-radius: 50%;
+  }
+}
+
+.slider-detail-text{
+  a {
+    color: $base-link-color;
+    font-weight: 500;
+    text-decoration: none;
+  }
 }
