@@ -128,9 +128,9 @@ export const HEADER_BACKGROUND_SECONDARY = "#4e5664";
 export const HEADER_BACKGROUND = "#949494";
 export const HEADER_BACKGROUND_SECONDARY = "#555";
 
-export const BASE_EXAMPLE_IMAGE_URL = "https://raw.githubusercontent.com/paulrichter99/portfolio_frontend/feature/resume/src/assets/exampleImages/"
+export const BASE_EXAMPLE_IMAGE_URL = "/assets/exampleImages/"
 
-export const RESUME_SLIDES = [
+export const PROJECT_SLIDES = [
   {
     "headerText": "RACEIT",
     "descriptionText": "raceit",
@@ -159,7 +159,7 @@ export const RESUME_SLIDES = [
     ]
   },
   {
-    "headerText": "Digital TA-Paper",
+    "headerText": "DIGITAL TA-PAPER",
     "descriptionText": "digitalta",
     "skillPercentage": 0,
     "skillColor": "#a6331b",
@@ -181,100 +181,48 @@ export const RESUME_SLIDES = [
         Das große Learning des Projektes besteht darin, Strukturen abhängig von Anforderung anders aufbauen \
         und so aus seiner comfort-zone ausbrechen zu müssen."
     ],
-    "fontAwesomeIcon" : "<img class='bigger-img' src='github_logo_tut_medium.png'>",
+    "fontAwesomeIcon" : "<img class='bigger-img' src='/assets/exampleImages/logo_tut_medium.png'>",
     "exampleImagesUrls" : [
+      BASE_EXAMPLE_IMAGE_URL + "tapaper_example_usage.png",
       BASE_EXAMPLE_IMAGE_URL + "tapaper-menu-example.PNG",
-      BASE_EXAMPLE_IMAGE_URL + "tapaper-page-example.PNG",
-      BASE_EXAMPLE_IMAGE_URL + "tapaper_example_usage.png"
+      BASE_EXAMPLE_IMAGE_URL + "tapaper-page-example.PNG"
     ]
   },
   {
-    "headerText": "SmartCommerce",
-    "descriptionText": "smartcommerce",
+    "headerText": "TUTORING",
+    "descriptionText": "tutoring",
     "skillPercentage": 0,
     "skillColor": "#a6331b",
     "detailedDescriptionText": [
-        "Von April 2021 bis Oktober 2022 arbeitete ich als Werkstudent bei der Firma SmartCommerce in Jena. <br><br>"
-        ,"Dort lernte ich die Welt von <b>\"Intershop\"</b> kennen, eine fertige Basisumgebung für Webshops, welche individuell \
-        auf Kunden angepasst wird.<br><br>"
-        ,"Viel am System direkt entwickelte ich nicht, was auch später der Grund dafür war mir eine neue Herausforderung \
-        in einem anderem Unternehmen zu suchen. Größtenteils war ich für das Testen der Storefront zuständig. Hierzu zählt nach anfänglichem \
-        erstellen von Testanforderungen und -szenarien vor allem das <b>automatisierte Testen, mit Hilfe des Selenium-Frameworks</b>, \
-        sowie die <b>Anbindung an die CI/CD Pipeline</b>, also das automatisierte Testen bei neuen Releases. <br><br>"
-        ,"Im Projekt und Team arbeiteten wir nach der <b>SCRUM-Methode</b>. Hier durfte ich also auch bereits viel \
-        Erfahrung sammeln.<br><br>"
-        ,"Neben einem Kundenprojekt wurde ich auch für eine Kollaboration mit einer anderen Firma eingesetzt, bei der \
-        3D-Modelle in das bestehende System integriert werden können. Hier arbeitete ich zusammen mit einem \
-        erfahrenen Entwickler. Über dieses Projekt kann sich \
-        <b><a target='_blank' href='https://www.rooom.com/de/rooom-products'>hier</a></b> \
-        informiert werden.<br><br>"
-        ,"In meiner Zeit bei SmartCommerce absolvierte ich einen <b>Basis-Angular Kurs</b>. Da ich aber bereits in anderen \
-        Projekten viel mit Angular arbeiten konnte, war mir der Großteil des Inhaltes bereits bekannt.<br><br>"
-        ,"Während meiner Zeit bei SmartCommerce lernte ich die <b>Arbeit im Team in einem professionellen und Kundenorientierten \
-        Projekt</b> kennen. Kundenorientierte Arbeit war mir zu diesem Zeitpunkt noch neu und ich bin dankbar hier bereits Einblicke \
-        bekommen zu haben. Außerdem lernte ich das SCRUM-Umfeld kennen und arbeitete erstmals sehr erfahrenen Entwicklern \
-        zusammen, was meine persönliche Weiterentwicklung vorantrieb."
+        "Mein eigentlicher Berufswunsch war es einmal Lehrer zu werden. Das hat sich zwar aus verschiedenen Gründen \
+        nicht ergeben, den Spaß am Lehren und die Freude Menschen helfen zu können bleiben jedoch.<br><br>"
+        ,"Deshalb gebe ich meiner Freizeit private Nachhilfe. Die Kommunikation mit Schülerinnen und Schülern kann \
+        sich aus meiner Erfahrung schwierig gestalten - die Idee eine Plattform zu entwickeln, die diese Kommunikation, \
+        Planung, Rahmenbedingungen und mehr vereinfachen soll war also geboren.<br><br>"
+        ,"So startete ich im Oktober diesen Jahres an diesem Projekt zu arbeiten. \
+        Nachdem ich die Gedanken und geplanten Features im Kopf geordnet und priorisiert habe, \
+        ging es ans entwickeln.<br><br>"
+        ,"Die Plattform soll sowohl auf dem SmartPhone, als auch auf dem Laptop/PC nutzbar sein. Eine Handy-App kam für mich \
+        nicht infrage - für ein paar Personen ist der Mehraufwand mit Playstores nicht lohnenswert.<br><br>"
+        ,"Eine Website mit einer Anpassung für Mobilgeräte wurde also umgesetzt. In der Umsetzung fiel mir schnell auf, \
+        dass Kalender deutlich komplizierter sind, als gedacht und das Updaten von Software und einzelnen Modulen, am \
+        Beispiel von JWT, ziemlich große Codeänderungen bedeuten kann.<br><br>"
+        ,"Das Projekt befindet sich zwar noch in der Entwicklung und ist nicht ganz ausgereift, dennoch habe ich bereits \
+        jetzt wieder neue Sachen gelernt, was mir zeigt, dass ein Lernprozess nie abgeschlossen sein kann oder sollte. Dinge \
+        immer wieder zu hinterfragen, auch wenn man Code recycled, ist ein wichtiger Prozess um sich ständig weiter zu entwickeln \
+        und nicht die Fähigkeit zu verlieren, Anforderungen und Projekte individuell zu betrachten."
     ],
-    "fontAwesomeIcon" : "<img class='smaller-img' src='github_logo_smartcommerce.png'>"
-  },
-  {
-    "headerText": "Navimatix GmbH",
-    "descriptionText": "navimatix",
-    "skillPercentage": 0,
-    "skillColor": "#a6331b",
-    "detailedDescriptionText": [
-        "Seit März 2023 arbeite ich bei der Firma Navimatix GmbH in Jena. Ich habe mich für diese Firma entschieden, \
-        weil mich die Bereiche der Projekte ansprachen, die Navimatix auf ihrer \
-        <b><a target='_blank' href='https://www.navimatix.de/'>Website</a></b> \
-        vorstellt und ich mit meiner Arbeit idealerweise einen nachhaltig gesellschaftlichen Mehrwert liefern will. <br><br>"
-        ,"Eingesetzt werde ich für die Verwaltung und den Support des Projektes \
-        <b><a target='_blank' href='https://www.navimatix.de/digitalesberichtsheft'>\"Digitales Berichtsheft\"</a></b>.<br><br>"
-        ,"Hierbei nutze ich mir bereits bekannte Technologien, wie <b>Angular mit Ionic und Spring</b>, musste mich aber auch mit \
-        Neuem, im Speziellen <b>Dart und Flutter</b>, sowie spezielle Anforderungen an Mobile-Apps beschäftigen. \
-        Hierbei fiel mir die Einarbeitung leicht und ich lernte schnell mit der Projektstruktur und den neuen \
-        Technologien umzugehen.<br><br>"
-        ,"Da es sich bei meiner Tätigkeit um den Support und die Instandhaltung handelt, ist eine strukturierte und Selbstständige \
-        Arbeitsweise von großer Bedeutung. \
-        Es ist sher wichtig eigenständig Impulse zu setzen und fehlerhaften oder schlechten Code effizient auszubessern. <br><br>"
-        ,"Aus meiner bisherigen Zeit bei Navimatix nehme ich bereits viele neue Erfahrungen mit. \
-        Zum einem mit Legacy Code umzugehen und diesen zu modernisieren und dokumentieren, \
-        zum anderem Selbstständig zu arbeiten und Projekte und Aufgaben neu zu strukturieren."
-    ],
-    "fontAwesomeIcon" : "<img class='header-img' src='github_logo_navimatix.png'>"
-  },
-  {
-    "headerText": "Taekwondo Union Thüringen",
-    "descriptionText": "tut",
-    "skillPercentage": 0,
-    "skillColor": "#a6331b",
-    "detailedDescriptionText": [
-        "Seit 2018 engagiere ich mich ehrenamtlich bei der Taekwondo Union Thüringen.<br><br>",
-        "In einem Team von fünf Leuten kümmern wir uns um die Ausrichtung \
-        von Turnieren, sowie die Wartung und Instandhaltung des dazugehörigen Equipments. Ein wichtiger Aspekt dabei \
-        ist die Administration und Konfiguration eines lokalen Turniernetzwerkes. \
-        Neben diesen Tätigkeiten bin ich für die Entwicklung der App \"Digital TA-Paper\" verantwortlich. <br><br>"
-        ,"Wettkämpfe im Taekwondo sind bereits im Bereich des Hobbysportes sehr technologisiert. \
-        So zählen zum Equipment neben den mit Sensoren ausgestatteten Schutzwesten und Helmen auch \
-        dazugehörige Software zum Empfangen und verarbeiten von Daten. \
-        Diese Software, sowie dazugehörige Laptops müssen ständig gewartet und auf den neuesten Stand gebracht werden. <br><br>"
-        ,"Ein weiterer großer Punkt in Sachen Equipment ist das Kamera- bzw. Video-Replay-System, was aber größtenteils \
-        unabhängig von der restlichen Turnier-Infrastruktur zu betrachten ist. Auch hier versuchen wir uns ständig zu hinterfragen, \
-        um eine nahtlose Integration in den Verlauf eines Kampfes zu gewährleisten. <br><br>"
-        ,"Das Herz des Systems bildet die Wettkampfleitung. Hierbei ist es wichtig \
-        möglichst fehlerfrei, aber auch schnell und Effizient zu arbeiten. Falls \
-        Beispielsweise Probleme bei der Datenübertragung auftreten, müssen potenzielle Fehler schnell ausfindig gemacht und \
-        überprüft und behoben werden. <br><br>"
-        ,"Die familiäre Atmosphäre im Team und breit aufgestellten Aufgabenbereiche führen dazu, dass mir die \
-        ehrenamtliche Arbeit viel Spaß bereitet. Außerdem konnte ich mein Wissen zu Netzwerktechnologien erweitern und \
-        ein für mich komplett neues technisches Feld entdecken."
-    ],
-    "fontAwesomeIcon" : "<img class='bigger-img' src='github_logo_tut_medium.png'>",
+    "fontAwesomeIcon" : "<i class='fa-solid fa-book-open slider-fontawesome-icon '></i>",
     "exampleImagesUrls" : [
-      BASE_EXAMPLE_IMAGE_URL + "tut_example_competition_admin.png",
-      BASE_EXAMPLE_IMAGE_URL + "tut_example_competition.png",
-      BASE_EXAMPLE_IMAGE_URL + "tapaper_example_usage.png"
+      BASE_EXAMPLE_IMAGE_URL + "tutoring_example_logo_banner.png",
+      BASE_EXAMPLE_IMAGE_URL + "tutoring_example.PNG",
+      BASE_EXAMPLE_IMAGE_URL + "tutoring_example_day.PNG",
+      BASE_EXAMPLE_IMAGE_URL + "tutoring_example_event.PNG"
     ]
-  },
+  }
+]
+
+export const STATIONS_SLIDES = [
   {
     "headerText": "Studium Informatik",
     "descriptionText": "uni",
@@ -304,5 +252,92 @@ export const RESUME_SLIDES = [
         zu werden</b>, sondern viel mehr Interesse an der Sache, sowie persönliches Engagement in Form von Projekten."
     ],
     "fontAwesomeIcon" : "<img class='header-img' src='https://upload.wikimedia.org/wikipedia/commons/1/19/Uni-Jena-logo.png'>"
+  },
+  {
+    "headerText": "Taekwondo Union Thüringen",
+    "descriptionText": "tut",
+    "skillPercentage": 0,
+    "skillColor": "#a6331b",
+    "detailedDescriptionText": [
+        "Seit 2018 engagiere ich mich ehrenamtlich bei der Taekwondo Union Thüringen.<br><br>",
+        "In einem Team von fünf Leuten kümmern wir uns um die Ausrichtung \
+        von Turnieren, sowie die Wartung und Instandhaltung des dazugehörigen Equipments. Ein wichtiger Aspekt dabei \
+        ist die Administration und Konfiguration eines lokalen Turniernetzwerkes. \
+        Neben diesen Tätigkeiten bin ich für die Entwicklung der App \"Digital TA-Paper\" verantwortlich. <br><br>"
+        ,"Wettkämpfe im Taekwondo sind bereits im Bereich des Hobbysportes sehr technologisiert. \
+        So zählen zum Equipment neben den mit Sensoren ausgestatteten Schutzwesten und Helmen auch \
+        dazugehörige Software zum Empfangen und verarbeiten von Daten. \
+        Diese Software, sowie dazugehörige Laptops müssen ständig gewartet und auf den neuesten Stand gebracht werden. <br><br>"
+        ,"Ein weiterer großer Punkt in Sachen Equipment ist das Kamera- bzw. Video-Replay-System, was aber größtenteils \
+        unabhängig von der restlichen Turnier-Infrastruktur zu betrachten ist. Auch hier versuchen wir uns ständig zu hinterfragen, \
+        um eine nahtlose Integration in den Verlauf eines Kampfes zu gewährleisten. <br><br>"
+        ,"Das Herz des Systems bildet die Wettkampfleitung. Hierbei ist es wichtig \
+        möglichst fehlerfrei, aber auch schnell und Effizient zu arbeiten. Falls \
+        Beispielsweise Probleme bei der Datenübertragung auftreten, müssen potenzielle Fehler schnell ausfindig gemacht und \
+        überprüft und behoben werden. <br><br>"
+        ,"Die familiäre Atmosphäre im Team und breit aufgestellten Aufgabenbereiche führen dazu, dass mir die \
+        ehrenamtliche Arbeit viel Spaß bereitet. Außerdem konnte ich mein Wissen zu Netzwerktechnologien erweitern und \
+        ein für mich komplett neues technisches Feld entdecken."
+    ],
+    "fontAwesomeIcon" : "<img class='bigger-img' src='/assets/exampleImages/logo_tut_medium.png'>",
+    "exampleImagesUrls" : [
+      BASE_EXAMPLE_IMAGE_URL + "tut_example_competition_admin.png",
+      BASE_EXAMPLE_IMAGE_URL + "tut_example_competition.png",
+      BASE_EXAMPLE_IMAGE_URL + "tapaper_example_usage.png"
+    ]
+  },
+  {
+    "headerText": "Navimatix GmbH",
+    "descriptionText": "navimatix",
+    "skillPercentage": 0,
+    "skillColor": "#a6331b",
+    "detailedDescriptionText": [
+        "Seit März 2023 arbeite ich bei der Firma Navimatix GmbH in Jena. Ich habe mich für diese Firma entschieden, \
+        weil mich die Bereiche der Projekte ansprachen, die Navimatix auf ihrer \
+        <b><a target='_blank' href='https://www.navimatix.de/'>Website</a></b> \
+        vorstellt und ich mit meiner Arbeit idealerweise einen nachhaltig gesellschaftlichen Mehrwert liefern will. <br><br>"
+        ,"Eingesetzt werde ich für die Verwaltung und den Support des Projektes \
+        <b><a target='_blank' href='https://www.navimatix.de/digitalesberichtsheft'>\"Digitales Berichtsheft\"</a></b>.<br><br>"
+        ,"Hierbei nutze ich mir bereits bekannte Technologien, wie <b>Angular mit Ionic und Spring</b>, musste mich aber auch mit \
+        Neuem, im Speziellen <b>Dart und Flutter</b>, sowie spezielle Anforderungen an Mobile-Apps beschäftigen. \
+        Hierbei fiel mir die Einarbeitung leicht und ich lernte schnell mit der Projektstruktur und den neuen \
+        Technologien umzugehen.<br><br>"
+        ,"Da es sich bei meiner Tätigkeit um den Support und die Instandhaltung handelt, ist eine strukturierte und Selbstständige \
+        Arbeitsweise von großer Bedeutung. \
+        Es ist sher wichtig eigenständig Impulse zu setzen und fehlerhaften oder schlechten Code effizient auszubessern. <br><br>"
+        ,"Aus meiner bisherigen Zeit bei Navimatix nehme ich bereits viele neue Erfahrungen mit. \
+        Zum einem mit Legacy Code umzugehen und diesen zu modernisieren und dokumentieren, \
+        zum anderem Selbstständig zu arbeiten und Projekte und Aufgaben neu zu strukturieren."
+    ],
+    "fontAwesomeIcon" : "<img class='header-img' src='/assets/exampleImages/logo_navimatix.png'>"
+  },
+  {
+    "headerText": "SmartCommerce",
+    "descriptionText": "smartcommerce",
+    "skillPercentage": 0,
+    "skillColor": "#a6331b",
+    "detailedDescriptionText": [
+        "Von April 2021 bis Oktober 2022 arbeitete ich als Werkstudent bei der Firma SmartCommerce in Jena. <br><br>"
+        ,"Dort lernte ich die Welt von <b>\"Intershop\"</b> kennen, eine fertige Basisumgebung für Webshops, welche individuell \
+        auf Kunden angepasst wird.<br><br>"
+        ,"Viel am System direkt entwickelte ich nicht, was auch später der Grund dafür war mir eine neue Herausforderung \
+        in einem anderem Unternehmen zu suchen. Größtenteils war ich für das Testen der Storefront zuständig. Hierzu zählt nach anfänglichem \
+        erstellen von Testanforderungen und -szenarien vor allem das <b>automatisierte Testen, mit Hilfe des Selenium-Frameworks</b>, \
+        sowie die <b>Anbindung an die CI/CD Pipeline</b>, also das automatisierte Testen bei neuen Releases. <br><br>"
+        ,"Im Projekt und Team arbeiteten wir nach der <b>SCRUM-Methode</b>. Hier durfte ich also auch bereits viel \
+        Erfahrung sammeln.<br><br>"
+        ,"Neben einem Kundenprojekt wurde ich auch für eine Kollaboration mit einer anderen Firma eingesetzt, bei der \
+        3D-Modelle in das bestehende System integriert werden können. Hier arbeitete ich zusammen mit einem \
+        erfahrenen Entwickler. Über dieses Projekt kann sich \
+        <b><a target='_blank' href='https://www.rooom.com/de/rooom-products'>hier</a></b> \
+        informiert werden.<br><br>"
+        ,"In meiner Zeit bei SmartCommerce absolvierte ich einen <b>Basis-Angular Kurs</b>. Da ich aber bereits in anderen \
+        Projekten viel mit Angular arbeiten konnte, war mir der Großteil des Inhaltes bereits bekannt.<br><br>"
+        ,"Während meiner Zeit bei SmartCommerce lernte ich die <b>Arbeit im Team in einem professionellen und Kundenorientierten \
+        Projekt</b> kennen. Kundenorientierte Arbeit war mir zu diesem Zeitpunkt noch neu und ich bin dankbar hier bereits Einblicke \
+        bekommen zu haben. Außerdem lernte ich das SCRUM-Umfeld kennen und arbeitete erstmals sehr erfahrenen Entwicklern \
+        zusammen, was meine persönliche Weiterentwicklung vorantrieb."
+    ],
+    "fontAwesomeIcon" : "<img class='smaller-img' src='/assets/exampleImages/logo_smartcommerce.png'>"
   }
 ]

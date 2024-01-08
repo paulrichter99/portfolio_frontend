@@ -1,0 +1,23 @@
+<section id="projects">
+  <div class='header-wrapper'>
+    <div class='lower-layer-header'> PROJEKTE </div>
+    <div class='upper-layer-header'> PROJEKTE </div>
+  </div>
+  <div class="projects-wrapper">
+    <div class="card-wrapper" *ngFor="let slide of projectSlides">
+      <div class="project-card" (click)="this.showSliderDetailsComponent(slide.descriptionText)">
+        <img src='{{slide.exampleImagesUrls![0]}}'>
+        <div class="project-card-header"> {{slide.headerText}} </div>
+        <div class="project-card-content">
+          <div class="project-card-content-single" *ngFor="let text of slide.detailedDescriptionText" [innerHTML]="text"> </div>
+        </div>
+        <div class="project-card-dots"> ... </div>
+      </div>
+    </div>
+  </div>
+  <app-slider-details id="projects-app-slider-details"
+          [slide]="this.currentSlide" style="display: none;"
+          (closeSliderModal)="closeSliderModal($event)"
+          (click)="$event.stopPropagation()"
+  > </app-slider-details>
+</section>

@@ -26,30 +26,6 @@ b {
   align-items: center;
 }
 
-#about-header-wrapper{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#about-header-wrapper > #upper-layer-header {
-  font-weight: 700;
-  font-size: 38px;
-  margin-top: -43px;
-  z-index: 1;
-  color: $base-color;
-}
-
-#about-header-wrapper > #lower-layer-header {
-  font-weight: 700;
-  font-size: 40px;
-  opacity: 0.2;
-  letter-spacing: 3px;
-  color: $base-color;
-}
-
 #about-body-wrapper{
   margin-top: 20px;
   max-width: 1450px;

@@ -1,15 +1,16 @@
 @import "/src/app/shared/variables.scss";
 
 #resume{
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 140px);
   width: 100%;
   padding-bottom: 60px;
   background-color: $base-color-bg;
   color: $resume-base-color;
+
+  padding-top: 80px;
 }
 
 .resume-wrapper{
-  padding-top: 80px;
   display: flex;
   flex-direction: row;
 
@@ -19,6 +20,8 @@
   width: 90%;
 
   margin: 0 auto;
+
+  margin-top: 50px;
 
   > div{
     min-height: 800px;

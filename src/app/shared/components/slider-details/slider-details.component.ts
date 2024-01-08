@@ -29,7 +29,6 @@ export class SliderDetailsComponent implements OnChanges{
   ngOnChanges(){
     if(this.slide != null && this.slide.fontAwesomeIcon){
       if(this.slide.fontAwesomeIcon.includes("src='github_")){
-        console.log(this.slide.fontAwesomeIcon)
         this.slide.fontAwesomeIcon = this.slide.fontAwesomeIcon?.replace("src='github_", "src='" + BASE_EXAMPLE_IMAGE_URL);
       }
     }
