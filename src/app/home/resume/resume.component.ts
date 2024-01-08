@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { SliderDetailsComponent } from 'src/app/shared/components/slider-details/slider-details.component';
 import { ResumeElement } from 'src/app/shared/objects/resumeElement';
 import { Slide } from 'src/app/shared/objects/slide';
-import { RESUME_SLIDES } from 'src/app/shared/objects/variables';
+import { PROJECT_SLIDES, STATIONS_SLIDES } from 'src/app/shared/objects/variables';
 
 @Component({
   selector: 'app-resume',
@@ -11,10 +11,12 @@ import { RESUME_SLIDES } from 'src/app/shared/objects/variables';
 })
 export class ResumeComponent implements AfterViewInit, OnInit{
 
+  resumeSlides = [...PROJECT_SLIDES, ...STATIONS_SLIDES];
+
   ngOnInit(): void {
-    for(let i = 0; i < RESUME_SLIDES.length; i++){
+    for(let i = 0; i < this.resumeSlides.length; i++){
       let img = new Image();
-      RESUME_SLIDES[i].exampleImagesUrls?.forEach(url => {
+      this.resumeSlides[i].exampleImagesUrls?.forEach(url => {
         img.src = url;
         this.loaded();
       });
@@ -69,7 +71,7 @@ export class ResumeComponent implements AfterViewInit, OnInit{
   rightSideElements: ResumeElement[] = [
     {
       title: "2022",
-      body: ["<b>Projekt für die Taekwondo Union Thüringen</b>", "<b class='resume-slider-opener' value='digitalta'> Projektname \"Digital-TA-Paper\" </b>"],
+      body: ["<b>Projekt für die Taekwondo Union Thüringen</b>", "<b class='resume-slider-opener' value='digitalta'> Projektname \"DIGITAL TA-PAPER\" </b>"],
       startYear: 2013,
       icon: "<i class='fa-brands fa-github resume-fontawesome-icon resume-fontawesome-larger-icon'></i>"
     },{
@@ -125,7 +127,7 @@ export class ResumeComponent implements AfterViewInit, OnInit{
   currentSlide: Slide | null = null;
   showSliderDetailsComponent(slideName: string){
     if(slideName == "") return;
-    RESUME_SLIDES.forEach(slide => {
+    this.resumeSlides.forEach(slide => {
       if(slide.descriptionText.toLowerCase().includes(slideName)){
         this.currentSlide = slide;
       }

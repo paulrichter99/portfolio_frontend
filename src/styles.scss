@@ -57,7 +57,6 @@ body, html {
 
 .resume-fontawesome-icon{
   font-size: 26px;
-  margin-top: -3px;
   color: $resume-element-bg;
 }
 
@@ -107,5 +106,30 @@ body, html {
     color: $base-link-color;
     font-weight: 500;
     text-decoration: none;
+  }
+}
+
+
+.header-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .upper-layer-header {
+    font-weight: 700;
+    font-size: 38px;
+    margin-top: -43px;
+    z-index: 1;
+    color: $base-color;
+  }
+
+  .lower-layer-header {
+    font-weight: 700;
+    font-size: 40px;
+    opacity: 0.2;
+    letter-spacing: 3px;
+    color: $base-color;
   }
 }

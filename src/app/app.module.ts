@@ -11,6 +11,7 @@ import { FrontpageComponent } from './home/frontpage/frontpage.component';
 import { SliderComponent } from './shared/components/slider/slider.component';
 import { ResumeComponent } from './home/resume/resume.component';
 import { SliderDetailsComponent } from './shared/components/slider-details/slider-details.component';
+import { PortfolioComponent } from './home/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SliderDetailsComponent } from './shared/components/slider-details/slide
     FrontpageComponent,
     SliderComponent,
     ResumeComponent,
-    SliderDetailsComponent
+    SliderDetailsComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
