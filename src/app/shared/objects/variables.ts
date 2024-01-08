@@ -170,7 +170,7 @@ export const PROJECT_SLIDES = [
         ,"In diesem Projekt habe ich gelernt, Strukturen abhängig von Anforderungen \
         anders aufzubauen und so aus meiner Komfortzone herauszugehen."
     ],
-    "fontAwesomeIcon" : "<img class='bigger-img' src='/assets/exampleImages/logo_tut_medium.png'>",
+    "fontAwesomeIcon" : "<img class='bigger-img round-img background-img' src='/assets/exampleImages/logo_tut_medium.png'>",
     "exampleImagesUrls" : [
       BASE_EXAMPLE_IMAGE_URL + "tapaper_example_usage.png",
       BASE_EXAMPLE_IMAGE_URL + "tapaper-menu-example.PNG",
@@ -183,25 +183,27 @@ export const PROJECT_SLIDES = [
     "skillPercentage": 0,
     "skillColor": "#a6331b",
     "detailedDescriptionText": [
-        "Mein eigentlicher Berufswunsch war es einmal Lehrer zu werden. Das hat sich zwar aus verschiedenen Gründen \
-        nicht ergeben, den Spaß am Lehren und die Freude Menschen helfen zu können bleiben jedoch.<br><br>"
-        ,"Deshalb gebe ich meiner Freizeit private Nachhilfe. Die Kommunikation mit Schülerinnen und Schülern kann \
-        sich aus meiner Erfahrung schwierig gestalten - die Idee eine Plattform zu entwickeln, die diese Kommunikation, \
-        Planung, Rahmenbedingungen und mehr vereinfachen soll war also geboren.<br><br>"
-        ,"So startete ich im Oktober diesen Jahres an diesem Projekt zu arbeiten. \
-        Nachdem ich die Gedanken und geplanten Features im Kopf geordnet und priorisiert habe, \
-        ging es ans entwickeln.<br><br>"
-        ,"Die Plattform soll sowohl auf dem SmartPhone, als auch auf dem Laptop/PC nutzbar sein. Eine Handy-App kam für mich \
-        nicht infrage - für ein paar Personen ist der Mehraufwand mit Playstores nicht lohnenswert.<br><br>"
-        ,"Eine Website mit einer Anpassung für Mobilgeräte wurde also umgesetzt. In der Umsetzung fiel mir schnell auf, \
-        dass Kalender deutlich komplizierter sind, als gedacht und das Updaten von Software und einzelnen Modulen, am \
-        Beispiel von JWT, ziemlich große Codeänderungen bedeuten kann.<br><br>"
-        ,"Das Projekt befindet sich zwar noch in der Entwicklung und ist nicht ganz ausgereift, dennoch habe ich bereits \
-        jetzt wieder neue Sachen gelernt, was mir zeigt, dass ein Lernprozess nie abgeschlossen sein kann oder sollte. Dinge \
-        immer wieder zu hinterfragen, auch wenn man Code recycled, ist ein wichtiger Prozess um sich ständig weiter zu entwickeln \
-        und nicht die Fähigkeit zu verlieren, Anforderungen und Projekte individuell zu betrachten."
+        "Mein eigentlicher Berufswunsch war es einmal Lehrer zu werden. \
+        Das hat sich zwar aus verschiedenen Gründen nicht ergeben, der Spaß am Lehren und die Freude, \
+        Menschen helfen zu können, bleibt jedoch.<br><br>"
+        ,"Deshalb gebe ich meiner Freizeit private Nachhilfe. Die Kommunikation mit Schülerinnen und Schülern \
+        kann sich aus meiner Erfahrung schwierig gestalten - die Idee, \
+        eine Plattform zu entwickeln, die diese Kommunikation, Planung, \
+        Rahmenbedingungen und mehr vereinfachen soll, wurde also geboren.<br><br>"
+        ,"Im Oktober diesen Jahres startete die Entwicklung des Projektes. \
+        Nach anfänglicher Ordnung und Priorisierung der Gedanken und geplanten Features \
+        begann die Entwicklung. <br><br>"
+        ,"Die Plattform soll sowohl auf dem Smartphone als auch auf dem Laptop/PC nutzbar sein. \
+        Ich entschied mich gegen eine native App - für die begrenzte Anzahl an Usern ist dies auch nicht nötig.<br><br>"
+        ,"Eine Website mit einer Anpassung für mobile Geräte wurde also umgesetzt. In der Umsetzung fiel mir schnell auf, \
+        dass Kalender deutlich komplizierter sind, als gedacht. Das Updaten von Software und einzelnen Modulen, \
+        am Beispiel von JWT, brachte ebenso einen Lernprozess und Aufwand mit sich.<br><br>"
+        ,"Das Projekt befindet sich zwar noch in der Entwicklung und ist nicht ganz ausgereift, \
+        dennoch habe ich viel Neues gelernt. Dinge immer wieder zu hinterfragen ist ein wichtiger Prozess, \
+        um sich ständig weiterzuentwickeln und nicht die Fähigkeit zu verlieren, Anforderungen \
+        und Projekte individuell zu betrachten."
     ],
-    "fontAwesomeIcon" : "<i class='fa-solid fa-book-open slider-fontawesome-icon '></i>",
+    "fontAwesomeIcon" : "<img class='bigger-img round-img' src='/assets/exampleImages/icon_paulrichter_tutoring_black_small.png'>",
     "exampleImagesUrls" : [
       BASE_EXAMPLE_IMAGE_URL + "tutoring_example_logo_banner.png",
       BASE_EXAMPLE_IMAGE_URL + "tutoring_example.PNG",
@@ -263,7 +265,7 @@ export const STATIONS_SLIDES = [
         dass mir die ehrenamtliche Arbeit viel Spaß bereitet. \
         Außerdem konnte ich mein Wissen zu Netzwerktechnologien erweitern und ein komplett neues technisches Feld entdecken."
     ],
-    "fontAwesomeIcon" : "<img class='bigger-img' src='/assets/exampleImages/logo_tut_medium.png'>",
+    "fontAwesomeIcon" : "<img class='bigger-img round-img background-img' src='/assets/exampleImages/logo_tut_medium.png'>",
     "exampleImagesUrls" : [
       BASE_EXAMPLE_IMAGE_URL + "tut_example_competition_admin.png",
       BASE_EXAMPLE_IMAGE_URL + "tut_example_competition.png",

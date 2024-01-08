@@ -96,7 +96,13 @@ body, html {
   .bigger-img{
     max-height: 70px;
     margin-right: 20px;
+  }
+
+  .background-img{
     background-color: rgb(149, 150, 144);
+  }
+
+  .round-img{
     border-radius: 50%;
   }
 }

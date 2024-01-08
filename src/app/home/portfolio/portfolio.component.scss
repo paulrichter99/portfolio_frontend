@@ -1,16 +1,18 @@
 @import "/src/app/shared/variables.scss";
 
 #projects{
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 200px);
   width: 100%;
   padding-top: 80px;
-  padding-bottom: 60px;
+  padding-bottom: 120px;
   background-color: $base-color-bg;
   color: $resume-base-color;
+
+  display: flex;
+  align-items: center;
 }
 
 .projects-wrapper{
-  padding-top: 80px;
   display: flex;
   flex-wrap: wrap;
 
