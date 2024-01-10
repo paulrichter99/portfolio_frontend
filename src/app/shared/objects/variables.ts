@@ -65,7 +65,9 @@ export const SLIDES = [
       ,"In diversen Projekten entwickelte ich einen sicheren Umgang mit <b>HTML, CSS/SCSS und TypeScript</b>. \
       Dies schafft die Basis für einen schnellen Lernprozess und eine effiziente Entwicklung.<br><br>"
       ,"Das Anbinden von Angular-Anwendungen an Server mittels <b>REST-APIs</b> realisierte ich bereits mehrmals. <br>\
-      Ein aktuelles Beispiel einer Web App mit Anbindung an ein Backend ist das <b>Tutoring</b> Projekt.<br><br>"
+      Ein aktuelles Beispiel einer Web App mit Anbindung an ein Backend ist das \
+      <b><a target='_blank' href='https://paulrichter-nachhilfe.de/'>Tutoring</a></b> \
+      Projekt.<br><br>"
       ,"Im Umgang mit Angular fühle ich mich sehr sicher. \
       Die Entwicklung von benutzerfreundlichen Oberflächen und reaktionsschnellen Webanwendungen bereitet mir Freude. \
       Der Einsatz von Angular hat mir ermöglicht, komplexe Anforderungen elegant umzusetzen. \
@@ -183,25 +185,27 @@ export const PROJECT_SLIDES = [
     "skillPercentage": 0,
     "skillColor": "#a6331b",
     "detailedDescriptionText": [
-        "Mein eigentlicher Berufswunsch war es einmal Lehrer zu werden. \
-        Das hat sich zwar aus verschiedenen Gründen nicht ergeben, der Spaß am Lehren und die Freude, \
-        Menschen helfen zu können, bleibt jedoch.<br><br>"
-        ,"Deshalb gebe ich meiner Freizeit private Nachhilfe. Die Kommunikation mit Schülerinnen und Schülern \
-        kann sich aus meiner Erfahrung schwierig gestalten - die Idee, \
-        eine Plattform zu entwickeln, die diese Kommunikation, Planung, \
-        Rahmenbedingungen und mehr vereinfachen soll, wurde also geboren.<br><br>"
+        "Lehrer zu werden, war mein eigentlicher Berufswunsch. \
+        Das hat sich zwar aus verschiedenen Gründen nicht ergeben, \
+        der Spaß am Lehren und die Freude daran, Menschen zu helfen, bleibt jedoch.<br><br>"
+        ,"Deshalb gebe ich meiner Freizeit private Nachhilfe. Die Kommunikation mit Schülerinnen und \
+        Schülern gestaltet sich aus meiner Erfahrung oft schwierig - Ich will also eine Plattform entwickeln, \
+        die diese Kommunikation, Planung und Rahmenbedingungen vereinfachen soll.<br><br>"
         ,"Im Oktober diesen Jahres startete die Entwicklung des Projektes. \
-        Nach anfänglicher Ordnung und Priorisierung der Gedanken und geplanten Features \
-        begann die Entwicklung. <br><br>"
+        Der aktuelle Stand kann sich direkt auf der \
+        <b><a target='_blank' href='https://paulrichter-nachhilfe.de/'>Wesbite</a></b> \
+        angesehen werden. Den Code dazu befindest sich auf \
+        <b><a target='_blank' href='https://github.com/paulrichter99/portfolio_frontend'>Github</a></b> \
+        <br><br>"
         ,"Die Plattform soll sowohl auf dem Smartphone als auch auf dem Laptop/PC nutzbar sein. \
-        Ich entschied mich gegen eine native App - für die begrenzte Anzahl an Usern ist dies auch nicht nötig.<br><br>"
-        ,"Eine Website mit einer Anpassung für mobile Geräte wurde also umgesetzt. In der Umsetzung fiel mir schnell auf, \
-        dass Kalender deutlich komplizierter sind, als gedacht. Das Updaten von Software und einzelnen Modulen, \
-        am Beispiel von JWT, brachte ebenso einen Lernprozess und Aufwand mit sich.<br><br>"
-        ,"Das Projekt befindet sich zwar noch in der Entwicklung und ist nicht ganz ausgereift, \
-        dennoch habe ich viel Neues gelernt. Dinge immer wieder zu hinterfragen ist ein wichtiger Prozess, \
-        um sich ständig weiterzuentwickeln und nicht die Fähigkeit zu verlieren, Anforderungen \
-        und Projekte individuell zu betrachten."
+        Ich entschied mich gegen eine App - für die begrenzte Anzahl an Usern ist eine \
+        Browser-Version oder Website ausreichend.<br><br>"
+        ,"In der Umsetzung fiel mir schnell auf, dass Kalender deutlich komplizierter sind, als gedacht. \
+        Das Updaten von Software und einzelnen Modulen, am Beispiel von JWT, \
+        brachte ebenso einen Lernprozess und einen signifikanten Mehraufwand mit sich.<br><br>"
+        ,"Das Projekt befindet sich zwar noch in der Entwicklung, dennoch habe ich bereits viel Neues gelernt. \
+        Dinge immer wieder zu hinterfragen ist ein wichtiger Prozess, um sich ständig weiterzuentwickeln \
+        und nicht die Fähigkeit zu verlieren, Anforderungen und Projekte individuell zu betrachten."
     ],
     "fontAwesomeIcon" : "<img class='bigger-img round-img' src='/assets/exampleImages/icon_paulrichter_tutoring_black_small.png'>",
     "exampleImagesUrls" : [
