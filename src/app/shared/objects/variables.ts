@@ -194,7 +194,7 @@ export const PROJECT_SLIDES = [
         ,"Im Oktober diesen Jahres startete die Entwicklung des Projektes. \
         Der aktuelle Stand kann sich direkt auf der \
         <b><a target='_blank' href='https://paulrichter-nachhilfe.de/'>Wesbite</a></b> \
-        angesehen werden. Den Code dazu befindest sich auf \
+        angesehen werden. Der Code dazu befindet sich auf \
         <b><a target='_blank' href='https://github.com/paulrichter99/'>Github</a></b> \
         <br><br>"
         ,"Die Plattform soll sowohl auf dem Smartphone als auch auf dem Laptop/PC nutzbar sein. \
