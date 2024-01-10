@@ -195,7 +195,7 @@ export const PROJECT_SLIDES = [
         Der aktuelle Stand kann sich direkt auf der \
         <b><a target='_blank' href='https://paulrichter-nachhilfe.de/'>Wesbite</a></b> \
         angesehen werden. Den Code dazu befindest sich auf \
-        <b><a target='_blank' href='https://github.com/paulrichter99/portfolio_frontend'>Github</a></b> \
+        <b><a target='_blank' href='https://github.com/paulrichter99/'>Github</a></b> \
         <br><br>"
         ,"Die Plattform soll sowohl auf dem Smartphone als auch auf dem Laptop/PC nutzbar sein. \
         Ich entschied mich gegen eine App - für die begrenzte Anzahl an Usern ist eine \
