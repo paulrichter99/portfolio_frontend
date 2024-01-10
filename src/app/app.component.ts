@@ -26,9 +26,4 @@ export class AppComponent {
       }
     }
   }
-
-  @HostListener('window:scroll', []) // for window scroll events
-    onScroll() {
-      console.log("scroll")
-    }
 }
